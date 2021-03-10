@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="schema/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ld="ledoux">
    <teiHeader>
       <fileDesc>
@@ -16,6 +16,13 @@
    </teiHeader>
    <text>
       <body>
+         <listObject>
+            <object>
+               <objectIdentifier>
+                  
+               </objectIdentifier>
+            </object>
+         </listObject>
          <listObject>
             <object>
                <!-- premier objet à savoir L'Architecture considérée, mais peut-être que cette description n'est pas nécessaire. -->
@@ -101,8 +108,8 @@
                      <relation>cuivre1, cuivre2</relation>
                   </objectDesc>
                   <relation>objet1>cuivre1, objet>idée1</relation>
+                  <history/>
                </physDesc>
-               <history/>
                <!-- Retracer l'historique de l'oeuvre -->
                <object>
                   <!-- idée de l’édifice -->
@@ -153,7 +160,7 @@
                </objectIdentifier>
                <objectType ref="http://data.culture.fr/thesaurus/page/ark:/67717/T96-517">Hôtel</objectType>
                <event>
-                  <eventType rel="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2">Creation</eventType>
+                  <eventType ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2">Creation</eventType>
                   <date from="1778"/>
                </event>
                <!-- Marie-Jeanne Girardot de Vermenoux (1736-1781) commanditaire -->
