@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Fichier d’exemple de descriptions de gravures pour le projet Ledoux</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>publicarchi</publisher>
+            <date from="2021-03-10"></date>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Document nativemnet numérique</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <listObject>
+            <object>
+               <objectIdentifier></objectIdentifier>
+            </object>
+            
+            
+            <!-- Description de la vue perspective de l’hôtel Thélusson (ex. INHA) -->
+            <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1634.jpg -->
+            <object>
+               <objectIdentifier>
+                  <objectName type="forged">Vue perspective de l’hôtel Thélusson depuis la grotte</objectName>
+                  <idno>inha Gd-inFol-32-xxx1</idno>
+               </objectIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support type="sheet">
+                           <material>papier...</material>
+                           <watermark>...</watermark>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <desc>La planche est découpée à la cuvette et collée au sein de l’album</desc>
+                           <dimensions type="album">
+                              <height>42</height>
+                              <width>59</width>
+                           </dimensions>
+                           <dimensions type="sheet">
+                              <height>34</height>
+                              <width>44</width>
+                           </dimensions>
+                           <dimensions type="plate">
+                              <height>34</height>
+                              <width>44</width>
+                           </dimensions>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+            </object>
+            
+         </listObject>
+      </body>
+  </text>
+</TEI>
