@@ -13,7 +13,7 @@
             <date from="2021-03-10"></date>
          </publicationStmt>
          <sourceDesc>
-            <p>Document nativemnet numérique</p>
+            <p>Document nativement numérique</p>
          </sourceDesc>
       </fileDesc>
   </teiHeader>
@@ -24,43 +24,57 @@
                <objectIdentifier></objectIdentifier>
             </object>
             
-            
             <!-- Description de la vue perspective de l’hôtel Thélusson (ex. INHA) -->
             <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1634.jpg -->
-            <object>
+            <object xml:id="ID_RECUEIL-NUMERO_PLANCHE">
+               <!-- première liste d'objets correspond aux planches du recueil (comment faire dans le cas des planches où sont regroupées plusieurs gravures ?) -->
                <objectIdentifier>
-                  <objectName type="forged">Vue perspective de l’hôtel Thélusson depuis la grotte</objectName>
-                  <idno>inha Gd-inFol-32-xxx1</idno>
+                  <!-- Lorsque la gravure n'a pas de titre, préciser qu'il est forgé avec @type="forged" -->
+                  <objectName type="forged">[Vue perspective de l’hôtel Thélusson depuis la grotte]</objectName>
+                  <!-- soit id dans <idno> (plutôt côte du recueil à indiquer au moment de la description du recueil, dans le teiHeader) ou alors dans @xml:id -->
+                  <!-- id : ID_RECUEIL-NUMERO_PLANCHE -->
+                  <idno>inha Gd-inFol-32-xxx1</idno> 
                </objectIdentifier>
                <physDesc>
                   <objectDesc>
-                     <supportDesc>
-                        <support type="sheet">
+                     <!-- description matérielle -->
+                     <supportDesc material="paper"> <!-- précision du matériau ? -->
+                        <!-- description du papier sur lequel l'estampe a été imprimée -->
+                        <support>
                            <material>papier...</material>
+                           <stamp>estampille Jacques Doucet</stamp>
                            <watermark>...</watermark>
                         </support>
-                     </supportDesc>
-                     <layoutDesc>
-                        <layout>
-                           <desc>La planche est découpée à la cuvette et collée au sein de l’album</desc>
-                           <dimensions type="album">
+                        <extent>
+                           <!-- précision des dimensions plutôt ici que dans layout car plutôt mise en page (utile pour décrire le cas où plusieurs estampes sont collées sur une même page) -->
+                           <!-- pas forcément utile de répéter les dimensions de la page du recueil puisque cela sera indiqué dans le header -->
+                           <dimensions type="albumPlate" unit="cm">
                               <height>42</height>
                               <width>59</width>
                            </dimensions>
-                           <dimensions type="sheet">
+                           <dimensions type="sheet" unit="cm"> <!-- sheet ou print ? -->
                               <height>34</height>
                               <width>44</width>
                            </dimensions>
-                           <dimensions type="plate">
+                           <dimensions type="plate" unit="cm">
                               <height>34</height>
                               <width>44</width>
                            </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <!-- précisions sur la mise en page  -->
+                        <layout>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
                         </layout>
                      </layoutDesc>
+                     <!-- voir pour décrire la technique (invention d'une balise ? materialDesc ? techniqueDesc ? -->
                   </objectDesc>
                </physDesc>
+               <linkGrp>
+                  <!-- ajouter ici des pointeurs ou liens vers les autres estampes ou monuments -->
+               </linkGrp>
             </object>
-            
          </listObject>
       </body>
   </text>
