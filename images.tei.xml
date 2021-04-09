@@ -19,46 +19,51 @@
   </teiHeader>
   <text>
       <body>
-         <listObject>
-            <object>
-               <objectIdentifier></objectIdentifier>
-            </object>
+         <listObject type="albumPlates">
+            <!-- première liste d'objets correspond aux planches du recueil (comment faire dans le cas des planches où sont regroupées plusieurs gravures ?) -->
             
-            <!-- Description de la vue perspective de l’hôtel Thélusson (ex. INHA) -->
-            <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1634.jpg -->
-            <object xml:id="ID_RECUEIL-NUMERO_PLANCHE">
-               <!-- première liste d'objets correspond aux planches du recueil (comment faire dans le cas des planches où sont regroupées plusieurs gravures ?) -->
+            <!-- exemple d'encodage des planches se référant à l’hôtel Thélusson (ex. INHA - Fol Res 169) -->
+            <object xml:id="FolRes169-pl050">
+               <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1630.jpg -->
                <objectIdentifier>
                   <!-- Lorsque la gravure n'a pas de titre, préciser qu'il est forgé avec @type="forged" -->
-                  <objectName type="forged">[Vue perspective de l’hôtel Thélusson depuis la grotte]</objectName>
-                  <!-- soit id dans <idno> (plutôt côte du recueil à indiquer au moment de la description du recueil, dans le teiHeader) ou alors dans @xml:id -->
-                  <!-- id : ID_RECUEIL-NUMERO_PLANCHE -->
-                  <idno>inha Gd-inFol-32-xxx1</idno> 
+                  <objectName type="forged">Vue perspective de l’hôtel Thélusson depuis la grotte</objectName>
+                  <!-- quand la planche a une côte, la préciser dans idno -->
+                  <idno>FolRes169-pl050</idno> 
                </objectIdentifier>
                <physDesc>
                   <objectDesc>
                      <!-- description matérielle -->
-                     <supportDesc material="paper"> <!-- précision du matériau ? -->
-                        <!-- description du papier sur lequel l'estampe a été imprimée -->
+                     <objectType> <!-- balise existante permettant de décrire le type d'objet auquel l'oeuvre appartient.
+                                       Sinon inventer une balise spécifique comme techniqueDesc ou mediumDesc -->
+                        <!-- description de la technique -->
+                        <!-- attributs : @type pour préciser "main" ou "sub" quand il y a plusieurs techniques 
+                                         @target pour indiquer le lien vers le thesaurus -->
+                        <technique target="LienVocabulaire">gravure ...</technique>
+                     </objectType>
+                     <supportDesc>
                         <support>
+                           <!-- description du papier sur lequel l'estampe a été imprimée -->
                            <material>papier...</material>
-                           <stamp>estampille Jacques Doucet</stamp>
+                           <stamp>estampille des collections Jacques Doucet</stamp>
                            <watermark>...</watermark>
                         </support>
                         <extent>
-                           <!-- précision des dimensions plutôt ici que dans layout car plutôt mise en page (utile pour décrire le cas où plusieurs estampes sont collées sur une même page) -->
-                           <!-- pas forcément utile de répéter les dimensions de la page du recueil puisque cela sera indiqué dans le header -->
+                           <!-- dimensions de la planche du recueil 
+                                pas forcément utile de répéter les dimensions de la page du recueil puisque cela sera indiqué dans le header -->
                            <dimensions type="albumPlate" unit="cm">
-                              <height>42</height>
-                              <width>59</width>
+                              <height>nn</height>
+                              <width>nn</width>
                            </dimensions>
-                           <dimensions type="sheet" unit="cm"> <!-- sheet ou print ? -->
-                              <height>34</height>
-                              <width>44</width>
+                           <!-- dimensions de la feuille imprimée -->
+                           <dimensions type="sheet" unit="cm">
+                              <height>nn</height>
+                              <width>nn</width>
                            </dimensions>
+                           <!-- dimensions de la cuvette/plaque -->
                            <dimensions type="plate" unit="cm">
-                              <height>34</height>
-                              <width>44</width>
+                              <height>nn</height>
+                              <width>nn</width>
                            </dimensions>
                         </extent>
                      </supportDesc>
@@ -68,14 +73,129 @@
                            <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
                         </layout>
                      </layoutDesc>
-                     <!-- voir pour décrire la technique (invention d'une balise ? materialDesc ? techniqueDesc ? -->
                   </objectDesc>
                </physDesc>
-               <linkGrp>
-                  <!-- ajouter ici des pointeurs ou liens vers les autres estampes ou monuments -->
-               </linkGrp>
+               <note>
+                  <listRelation>
+                     <relation type="LRM" name="Rnn" active="" passive=""></relation>
+                     <relation type="CRM" name="Pnn" active="" passive=""></relation>
+                  </listRelation>
+               </note>
+            </object>
+            
+            <object xml:id="FolRes169-pl051">
+               <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1633.jpg -->
+               <objectIdentifier>
+                  <objectName>Plan du Rez-de-Chaussée de la maison de Madame de Thelusson, rue de Provence</objectName>
+                  <idno>FolRes169-pl051</idno> 
+               </objectIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <objectType>
+                        <technique target="LienVocabulaire">gravure ...</technique>
+                     </objectType>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille de la Bibliothèque d'Art et d'Archéologie</stamp>
+                           <watermark>...</watermark>
+                        </support>
+                        <extent>
+                           <dimensions type="albumPlate" unit="cm">
+                              <height>nn</height>
+                              <width>nn</width>
+                           </dimensions>
+                           <dimensions type="sheet" unit="cm">
+                              <height>nn</height>
+                              <width>nn</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>nn</height>
+                              <width>nn</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <note>
+                  <listRelation>
+                     <relation type="LRM" name="Rnn" active="" passive=""></relation>
+                     <relation type="CRM" name="Pnn" active="" passive=""></relation>
+                  </listRelation>
+               </note>
+            </object>
+            
+            <object xml:id="FolRes169-pl052">
+               <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1634.jpg -->
+               <objectIdentifier>
+                  <objectName>Vue perspective de l’entrée de la maison de Madame de Thelusson</objectName>
+                  <idno>FolRes169-pl052</idno> 
+               </objectIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <objectType>
+                        <technique target="LienVocabulaire">gravure ...</technique>
+                     </objectType>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille des collections Jacques Doucet</stamp>
+                           <watermark>...</watermark>
+                        </support>
+                        <extent>
+                           <dimensions type="albumPlate" unit="cm">
+                              <height>nn</height>
+                              <width>nn</width>
+                           </dimensions>
+                           <dimensions type="sheet" unit="cm">
+                              <height>nn</height>
+                              <width>nn</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>nn</height>
+                              <width>nn</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <note>
+                  <listRelation>
+                     <relation type="LRM" name="Rnn" active="" passive=""></relation>
+                     <relation type="CRM" name="Pnn" active="" passive=""></relation>
+                  </listRelation>
+               </note>
             </object>
          </listObject>
+         
+         <!-- décisions à prendre concernant la manière dont nous allons présenter les oeuvres (intellectuelles et physiques) à lier avec les planches -->
+         <!-- listes de type LRM avec oeuvre, expression, manifestation et item ? -->
+         <!-- listes liées aux différentes manifestations de l'oeuvre architecturale ? (édifice, gravure, dessin...) -->
+         <listObject type="">
+            <object>
+               <objectIdentifier></objectIdentifier>
+            </object>
+         </listObject>
+         
+         <listPerson>
+            <!-- liste qui sera peut être dans le header ? Permettra ensuite de faire des relations entre les oeuvres, Ledoux et le graveur -->
+            <person xml:id="Ledoux">
+               <name>Claude Nicolas Ledoux</name>
+            </person>
+            <person xml:id="Hulk">
+               <name>Abraham Jacobsz Hulk</name>
+            </person>
+         </listPerson>
       </body>
   </text>
 </TEI>
