@@ -19,8 +19,9 @@
   </teiHeader>
   <text>
       <body>
-         <listObject type="albumPlates">
-            <!-- première liste d'objets correspond aux planches du recueil (comment faire dans le cas des planches où sont regroupées plusieurs gravures ?) -->
+         <listObject type="albumPlates"> <!-- type albumPlates ou Items ? ou alors est-ce qu'on type directement l'objet ? -->
+            <head>Planches du recueil</head>
+            <!-- première liste d'objets correspond aux planches du recueil -->
             
             <!-- exemple d'encodage des planches se référant à l’hôtel Thélusson (ex. INHA - Fol Res 169) -->
             <object xml:id="FolRes169-pl050">
@@ -28,7 +29,7 @@
                <objectIdentifier>
                   <!-- Lorsque la gravure n'a pas de titre, préciser qu'il est forgé avec @type="forged" -->
                   <objectName type="forged">Vue perspective de l’hôtel Thélusson depuis la grotte</objectName>
-                  <!-- quand la planche a une côte, la préciser dans idno -->
+                  <!-- quand la planche a une cote, la préciser dans idno -->
                   <idno>FolRes169-pl050</idno> 
                </objectIdentifier>
                <physDesc>
@@ -37,13 +38,15 @@
                      <objectType> <!-- balise existante permettant de décrire le type d'objet auquel l'oeuvre appartient.
                                        Sinon inventer une balise spécifique comme techniqueDesc ou mediumDesc -->
                         <!-- description de la technique -->
+                        <!-- balise technique inventée, aucune ne semble réellement décrire la technique de fabrication d'un objet, 
+                           material est celle qui s'en rapproche le plus mais utilisée ici pour décrire le support -->
                         <!-- attributs : @type pour préciser "main" ou "sub" quand il y a plusieurs techniques 
                                          @target pour indiquer le lien vers le thesaurus -->
                         <technique target="LienVocabulaire">gravure ...</technique>
                      </objectType>
                      <supportDesc>
                         <support>
-                           <!-- description du papier sur lequel l'estampe a été imprimée -->
+                           <!-- description du support sur lequel l'estampe a été imprimée -->
                            <material>papier...</material>
                            <stamp>estampille des collections Jacques Doucet</stamp>
                            <watermark>...</watermark>
@@ -77,8 +80,9 @@
                </physDesc>
                <note>
                   <listRelation>
-                     <relation type="LRM" name="Rnn" active="" passive=""></relation>
-                     <relation type="CRM" name="Pnn" active="" passive=""></relation>
+                     <!-- exemple de relation -->
+                     <relation type="LRM" name="R7" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plaque005"/>
+                     <relation type="CRM" name="Pnn" ref="LIEN" active="" passive=""></relation>
                   </listRelation>
                </note>
             </object>
@@ -124,8 +128,8 @@
                </physDesc>
                <note>
                   <listRelation>
-                     <relation type="LRM" name="Rnn" active="" passive=""></relation>
-                     <relation type="CRM" name="Pnn" active="" passive=""></relation>
+                     <relation type="LRM" name="Rnn" ref="LIEN" active="" passive=""></relation>
+                     <relation type="CRM" name="Pnn" ref="LIEN" active="" passive=""></relation>
                   </listRelation>
                </note>
             </object>
@@ -171,19 +175,72 @@
                </physDesc>
                <note>
                   <listRelation>
-                     <relation type="LRM" name="Rnn" active="" passive=""></relation>
-                     <relation type="CRM" name="Pnn" active="" passive=""></relation>
+                     <relation type="LRM" name="Rnn" ref="LIEN" active="" passive=""></relation>
+                     <relation type="CRM" name="Pnn" ref="LIEN" active="" passive=""></relation>
                   </listRelation>
                </note>
             </object>
          </listObject>
          
-         <!-- décisions à prendre concernant la manière dont nous allons présenter les oeuvres (intellectuelles et physiques) à lier avec les planches -->
-         <!-- listes de type LRM avec oeuvre, expression, manifestation et item ? -->
-         <!-- listes liées aux différentes manifestations de l'oeuvre architecturale ? (édifice, gravure, dessin...) -->
-         <listObject type="">
-            <object>
-               <objectIdentifier></objectIdentifier>
+         <listObject type="works">
+            <head>Oeuvres</head>
+            <object xml:id="hotelThelussonW">
+               <objectIdentifier>
+                  <objectName>Hôtel de Thélusson</objectName>
+               </objectIdentifier>
+               <note>
+                  <listEvent>
+                     <!-- Les événements/activités liées à une oeuvre peuvent être listés dans listEvent -->
+                     <event type="CRM" ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2" from="1778" xml:id="creation001">
+                        <desc>Création</desc>
+                     </event>
+                  </listEvent>
+                  <listRelation>
+                     <!-- exemple de relation entre un événement et un acteur 
+                     Des relations LRM peuvent également être précisées pour lier les différentes manifestations d'une oeuvre -->
+                     <relation type="CRM" name="P14" ref="http://www.cidoc-crm.org/node/4435" active="#creation001" passive="#Ledoux"></relation>
+                  </listRelation>
+               </note>
+            </object>
+         </listObject>
+         
+         <listObject type="buildings">
+            <head>Édifices</head>
+            <object xml:id="hotelThelussonB">
+               <objectIdentifier>
+                  <objectName>Hôtel de Thélusson</objectName>
+               </objectIdentifier>
+               <note>
+                  <listEvent>
+                     <event type="CRM" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2" from="1778" xml:id="production001">
+                        <desc>Construction</desc>
+                     </event>
+                  </listEvent>
+                  <listRelation>
+                     <!-- exemple de relation -->
+                     <relation type="LRM" name="R3" active="#hotelThelussonW" passive="#hotelThelussonB"/>
+                  </listRelation>
+               </note>
+            </object>
+         </listObject>
+         
+         <listObject type="plates">
+            <head>Manifestations gravées (plaques)</head>
+            <object xml:id="plaque005">
+               <objectIdentifier>
+                  <objectName>Plaque de la Vue perspective de l’hôtel Thélusson depuis la grotte</objectName>
+               </objectIdentifier>
+               <note>
+                  <listEvent>
+                     <event type="CRM" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2" xml:id="production002">
+                        <desc>Gravure de la plaque</desc>
+                     </event>
+                  </listEvent>
+                  <listRelation>
+                     <!-- exemple de relation -->
+                     <relation type="LRM" name="R3" active="#hotelThelussonW" passive="#plaque005"/>
+                  </listRelation>
+               </note>
             </object>
          </listObject>
          
