@@ -32,18 +32,25 @@
                   <!-- quand la planche a une cote, la préciser dans idno -->
                   <idno>FolRes169-pl050</idno> 
                </objectIdentifier>
+               <objectClassification>
+                  <!-- informations relatives à la catégorisation et à la classification de l'objet -->
+                  <!-- attributs du système att.canonical : @key pour préciser le nom de l'entité ou du vocabulaire
+                                                            @ref pour indiquer son uri -->
+                  <!-- category correspond soit à l'entité E22 Human-Made Object soit à E20 Biological Object -->
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <!-- classification est répétable -->
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
                <physDesc>
                   <objectDesc>
                      <!-- description matérielle -->
-                     <objectType> <!-- balise existante permettant de décrire le type d'objet auquel l'oeuvre appartient.
-                                       Sinon inventer une balise spécifique comme techniqueDesc ou mediumDesc -->
+                     <mediumDesc>
                         <!-- description de la technique -->
-                        <!-- balise technique inventée, aucune ne semble réellement décrire la technique de fabrication d'un objet, 
-                           material est celle qui s'en rapproche le plus mais utilisée ici pour décrire le support -->
                         <!-- attributs : @type pour préciser "main" ou "sub" quand il y a plusieurs techniques 
-                                         @target pour indiquer le lien vers le thesaurus -->
-                        <technique target="LienVocabulaire">gravure ...</technique>
-                     </objectType>
+                                         @key pour le nom du vocabulaire
+                                         @ref pour indiquer l'uri du vocabulaire -->
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure ...</medium>
+                     </mediumDesc>
                      <supportDesc>
                         <support>
                            <!-- description du support sur lequel l'estampe a été imprimée -->
@@ -78,11 +85,16 @@
                      </layoutDesc>
                   </objectDesc>
                </physDesc>
+               <!-- description de l'historique de l'oeuvre -->
+               <history></history>
                <note>
                   <listRelation>
                      <!-- exemple de relation -->
-                     <relation type="LRM" name="R7" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plaque005"/>
-                     <relation type="CRM" name="Pnn" ref="LIEN" active="" passive=""></relation>
+                     <!-- attributs : @type précise le nom du modèle conceptuel ou alors indiquer ici le nom de l'entité
+                                      @key et @ref pour identifier l'entité 
+                                      @active correspond au sujet et @passive à l'objet (relation S-P-O) -->
+                     <relation type="LRM" key="R7" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plaque005"/>
+                     <relation type="CRM" key="Pnn" ref="LIEN" active="SUJET" passive="OBJET"></relation>
                   </listRelation>
                </note>
             </object>
@@ -93,11 +105,15 @@
                   <objectName>Plan du Rez-de-Chaussée de la maison de Madame de Thelusson, rue de Provence</objectName>
                   <idno>FolRes169-pl051</idno> 
                </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
                <physDesc>
                   <objectDesc>
-                     <objectType>
-                        <technique target="LienVocabulaire">gravure ...</technique>
-                     </objectType>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure ...</medium>
+                     </mediumDesc>
                      <supportDesc>
                         <support>
                            <material>papier...</material>
@@ -128,8 +144,8 @@
                </physDesc>
                <note>
                   <listRelation>
-                     <relation type="LRM" name="Rnn" ref="LIEN" active="" passive=""></relation>
-                     <relation type="CRM" name="Pnn" ref="LIEN" active="" passive=""></relation>
+                     <relation type="LRM" key="Rnn" ref="LIEN" active="" passive=""></relation>
+                     <relation type="CRM" key="Pnn" ref="LIEN" active="" passive=""></relation>
                   </listRelation>
                </note>
             </object>
@@ -140,11 +156,15 @@
                   <objectName>Vue perspective de l’entrée de la maison de Madame de Thelusson</objectName>
                   <idno>FolRes169-pl052</idno> 
                </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
                <physDesc>
                   <objectDesc>
-                     <objectType>
-                        <technique target="LienVocabulaire">gravure ...</technique>
-                     </objectType>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure ...</medium>
+                     </mediumDesc>
                      <supportDesc>
                         <support>
                            <material>papier...</material>
@@ -175,8 +195,8 @@
                </physDesc>
                <note>
                   <listRelation>
-                     <relation type="LRM" name="Rnn" ref="LIEN" active="" passive=""></relation>
-                     <relation type="CRM" name="Pnn" ref="LIEN" active="" passive=""></relation>
+                     <relation type="LRM" key="Rnn" ref="LIEN" active="" passive=""></relation>
+                     <relation type="CRM" key="Pnn" ref="LIEN" active="" passive=""></relation>
                   </listRelation>
                </note>
             </object>
@@ -184,21 +204,25 @@
          
          <listObject type="works">
             <head>Oeuvres</head>
+            <!-- Voir pour le nommage des @xml:id des objets -->
             <object xml:id="hotelThelussonW">
                <objectIdentifier>
                   <objectName>Hôtel de Thélusson</objectName>
                </objectIdentifier>
+               <listEvent>
+                  <!-- Les événements/activités liées à une oeuvre peuvent être listés dans listEvent -->
+                  <!-- Voir pour le nommage des @xml:id des événements -->
+                  <!-- attributs : @key, @ref et @type pour identifier l'entité
+                                   @from et @to pour dater l'événement -->
+                  <event key="E65" ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2" type="Creation" from="1778" to="" xml:id="creation001">
+                     <desc>Création</desc>
+                  </event>
+               </listEvent>
                <note>
-                  <listEvent>
-                     <!-- Les événements/activités liées à une oeuvre peuvent être listés dans listEvent -->
-                     <event type="CRM" ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2" from="1778" xml:id="creation001">
-                        <desc>Création</desc>
-                     </event>
-                  </listEvent>
                   <listRelation>
                      <!-- exemple de relation entre un événement et un acteur 
                      Des relations LRM peuvent également être précisées pour lier les différentes manifestations d'une oeuvre -->
-                     <relation type="CRM" name="P14" ref="http://www.cidoc-crm.org/node/4435" active="#creation001" passive="#Ledoux"></relation>
+                     <relation type="CRM" key="P14" ref="http://www.cidoc-crm.org/node/4435" active="#creation001" passive="#Ledoux"></relation>
                   </listRelation>
                </note>
             </object>
@@ -206,19 +230,20 @@
          
          <listObject type="buildings">
             <head>Édifices</head>
+            <!-- Voir pour le nommage des @xml:id des objets -->
             <object xml:id="hotelThelussonB">
                <objectIdentifier>
                   <objectName>Hôtel de Thélusson</objectName>
                </objectIdentifier>
+               <listEvent>
+                  <event type="CRM" key="E12" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2" from="1778" xml:id="production001">
+                     <desc>Construction</desc>
+                  </event>
+               </listEvent>
                <note>
-                  <listEvent>
-                     <event type="CRM" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2" from="1778" xml:id="production001">
-                        <desc>Construction</desc>
-                     </event>
-                  </listEvent>
                   <listRelation>
                      <!-- exemple de relation -->
-                     <relation type="LRM" name="R3" active="#hotelThelussonW" passive="#hotelThelussonB"/>
+                     <relation type="LRM" key="R3" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#hotelThelussonW" passive="#hotelThelussonB"/>
                   </listRelation>
                </note>
             </object>
@@ -226,19 +251,20 @@
          
          <listObject type="plates">
             <head>Manifestations gravées (plaques)</head>
+            <!-- Voir pour le nommage des @xml:id des objets -->
             <object xml:id="plaque005">
                <objectIdentifier>
                   <objectName>Plaque de la Vue perspective de l’hôtel Thélusson depuis la grotte</objectName>
                </objectIdentifier>
+               <listEvent>
+                  <event type="CRM" key="E12" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2" from="1778" xml:id="production001">
+                     <desc>Construction</desc>
+                  </event>
+               </listEvent>
                <note>
-                  <listEvent>
-                     <event type="CRM" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2" xml:id="production002">
-                        <desc>Gravure de la plaque</desc>
-                     </event>
-                  </listEvent>
                   <listRelation>
                      <!-- exemple de relation -->
-                     <relation type="LRM" name="R3" active="#hotelThelussonW" passive="#plaque005"/>
+                     <relation type="LRM" key="R3" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#hotelThelussonW" passive="#plaque005"/>
                   </listRelation>
                </note>
             </object>
@@ -246,6 +272,7 @@
          
          <listPerson>
             <!-- liste qui sera peut être dans le header ? Permettra ensuite de faire des relations entre les oeuvres, Ledoux et le graveur -->
+            <!-- voir le nommage des @xml:id -->
             <person xml:id="Ledoux">
                <name>Claude Nicolas Ledoux</name>
             </person>
