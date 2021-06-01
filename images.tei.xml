@@ -25,7 +25,7 @@
             <!-- première liste d'objets correspond aux planches du recueil -->
 
             <!-- exemple d'encodage des planches se référant à l’hôtel Thélusson (ex. INHA - Fol Res 169) -->
-            <object xml:id="FolRes169-pl050">
+            <object xml:id="s0001">
                <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1630.jpg -->
                <objectIdentifier>
                   <!-- Lorsque la gravure n'a pas de titre, préciser qu'il est forgé avec @type="forged" -->
@@ -92,11 +92,11 @@
                   <!-- attributs : @type précise le nom du modèle conceptuel ou alors indiquer ici le nom de l'entité
                                    @key et @ref pour identifier l'entité 
                                    @active correspond au sujet et @passive à l'objet (relation S-P-O) -->
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate001"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0001" passive="#p0001"/>
                </listRelation>
             </object>
 
-            <object xml:id="FolRes169-pl051">
+            <object xml:id="s0002">
                <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1633.jpg -->
                <objectIdentifier>
                   <objectName>Plan du Rez-de-Chaussée de la maison de Madame de Thelusson, rue de Provence</objectName>
@@ -135,11 +135,11 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate002"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0002" passive="#p0002"/>
                </listRelation>
             </object>
 
-            <object xml:id="FolRes169-pl052">
+            <object xml:id="s0003">
                <!-- https://sharedocs.huma-num.fr/wl/?id=uv0tvIxjNQ7DboQQAIPLY6KffsKefQW2&path=IMG_1634.jpg -->
                <objectIdentifier>
                   <objectName>Vue perspective de l’entrée de la maison de Madame de Thelusson</objectName>
@@ -178,12 +178,12 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate003"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0003" passive="#p0003"/>
                </listRelation>
             </object>
             
             <!-- exemple d'encodage des planches se référant au théâtre des Capucines (ex. BHVP - 1 Res 122) -->
-            <object xml:id="1Res122-pl049">
+            <object xml:id="s0004">
                <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0084.simple.selectedTab=thumbnail -->
                <objectIdentifier>
                   <objectName type="forged">Plan de situation montrant le boulevard, la place Vendôme et le marché des Jacobins et plan du théâtre des Capucines</objectName>
@@ -224,11 +224,11 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl049" passive="#plate004"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0004" passive="#p0004"/>
                </listRelation>
             </object>
             
-            <object xml:id="1Res122-pl050">
+            <object xml:id="s0005">
                <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0086.simple.selectedTab=thumbnail -->
                <objectIdentifier>
                   <objectName type="forged">Plan du théâtre des Capucines</objectName>
@@ -267,11 +267,11 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl050" passive="#plate005"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0005" passive="#p0005"/>
                </listRelation>
             </object>
             
-            <object xml:id="1Res122-pl051">
+            <object xml:id="s0006">
                <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0088.simple.selectedTab=thumbnail -->
                <objectIdentifier>
                   <objectName type="forged">Plan du théâtre des Capucines</objectName>
@@ -310,11 +310,11 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl051" passive="#plate006"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0006" passive="#p0006"/>
                </listRelation>
             </object>
             
-            <object xml:id="1Res122-pl052">
+            <object xml:id="s0007">
                <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0090.simple.selectedTab=thumbnail -->
                <objectIdentifier>
                   <objectName type="forged">Plan du théâtre des Capucines</objectName>
@@ -353,11 +353,11 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl052" passive="#plate007"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0007" passive="#p0007"/>
                </listRelation>
             </object>
             
-            <object xml:id="1Res122-pl053">
+            <object xml:id="s0008">
                <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0092.simple.selectedTab=thumbnail -->
                <objectIdentifier>
                   <objectName type="forged">Plan du théâtre des Capucines</objectName>
@@ -396,11 +396,11 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl053" passive="#plate008"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0008" passive="#p0008"/>
                </listRelation>
             </object>
             
-            <object xml:id="1Res122-pl054">
+            <object xml:id="s0009">
                <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0094.simple.selectedTab=thumbnail -->
                <objectIdentifier>
                   <objectName type="forged">Plan à trois niveaux du théâtre des Capucines</objectName>
@@ -439,11 +439,11 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl054" passive="#plate009"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0009" passive="#p0009"/>
                </listRelation>
             </object>
             
-            <object xml:id="1Res122-pl055">
+            <object xml:id="s0010">
                <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0094.simple.selectedTab=thumbnail -->
                <objectIdentifier>
                   <objectName>Elévation latérale. Elévation principale</objectName>
@@ -486,7 +486,7 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl055" passive="#plate010"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0010" passive="#p0010"/>
                </listRelation>
             </object>
          </listObject>
@@ -494,7 +494,7 @@
          <listObject type="works">
             <head>Oeuvres</head>
             <!-- Voir pour le nommage des @xml:id des objets -->
-            <object xml:id="work001">
+            <object xml:id="w0001">
                <objectIdentifier>
                   <objectName>Hôtel de Thélusson</objectName>
                </objectIdentifier>
@@ -508,20 +508,19 @@
                   <event type="CRM" key="E65-creation" ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2">
                      <date>1778</date>
                      <!-- définir les rôles des participants -->
-                     <!-- attribut @type : creator ? -->
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" type="creator">Claude Nicolas Ledoux</persName>
-                  </event>
-                  <!-- voir pour l'événement lié à la commande @subtype : order ou finance ? -->
-                  <event type="CRM" subtype="order" key="E7-activity" ref="http://www.cidoc-crm.org/Entity/e7-activity/version-6.2">
-                     <!-- définir les rôles des participants -->
-                     <!-- attribut @type : patron ? -->
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" type="patron">Marie-Jeanne Girardot de Vermenoux</persName>
-                     <desc>Marie-Jeanne Girardot de Vermenoux commande l'hôtel de Thélusson à Claude-Nicolas Ledoux</desc>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p94-has-created/version-6.2" key="P94-has-created">Claude Nicolas Ledoux</persName>
+                        <role>Créateur</role>
+                     </participant>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Marie-Jeanne Girardot de Vermenoux</persName>
+                        <role>Commanditaire</role>
+                     </participant>
                   </event>
                </listEvent>
             </object>
             
-            <object xml:id="work002">
+            <object xml:id="w0002">
                <objectIdentifier>
                   <objectName>Théâtre des Capucines</objectName>
                </objectIdentifier>
@@ -531,7 +530,10 @@
                </objectClassification>
                <listEvent>
                   <event type="CRM" key="E65-creation" ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2">
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" type="creator">Claude Nicolas Ledoux</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p94-has-created/version-6.2" key="P94-has-created">Claude Nicolas Ledoux</persName>
+                        <role>Créateur</role>
+                     </participant>
                   </event>
                </listEvent>
             </object>
@@ -540,7 +542,7 @@
          <listObject type="buildings">
             <head>Édifices</head>
             <!-- Voir pour le nommage des @xml:id des objets -->
-            <object xml:id="building001">
+            <object xml:id="b0001">
                <objectIdentifier>
                   <objectName>Hôtel de Thélusson</objectName>
                </objectIdentifier>
@@ -549,32 +551,23 @@
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Hôtel particulier</classification>
                </objectClassification>
                <!-- Voir pour l'adresse -->
-               <history>
-                  <origin>
-                     <placeName>
-                        <address>
-                           <street>30 rue de Provence</street>
-                           <settlement>Paris</settlement>
-                           <country>France</country>
-                        </address>
-                     </placeName>
-                  </origin>
-               </history>
+               <location>
+                  <address>
+                     <street>30 rue de Provence</street>
+                     <settlement>Paris</settlement>
+                     <country>France</country>
+                  </address>
+               </location>
                <listEvent>
-                  <!-- types d'événements : commande, production, acquisition, modification, desctuction -->
+                  <!-- types d'événements : production, acquisition, modification, desctuction -->
                   <!-- voir pour l'événement lié à la commande @subtype : order ou finance ? -->
-                  <event type="CRM" subtype="order" key="E7-activity" ref="http://www.cidoc-crm.org/Entity/e7-activity/version-6.2">
-                     <!-- définir les rôles des participants -->
-                     <!-- attribut @type : patron ? -->
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" type="patron">Marie-Jeanne Girardot de Vermenoux</persName>
-                     <desc>Marie-Jeanne Girardot de Vermenoux commande l'hôtel de Thélusson à Claude-Nicolas Ledoux</desc>
-                  </event>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
                      <date>1778</date>
                      <!-- définir les rôles des participants -->
-                     <!-- attribut @type : architect -->
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="architect">Claude Nicolas Ledoux</persName>
-                     <!-- Quelle précision dans le lieu au niveau de l'événement ? -->
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Architecte</role>
+                     </participant>
                      <placeName>Paris</placeName>
                   </event>
                   <event type="CRM" key="E8-acquisition" ref="http://www.cidoc-crm.org/Entity/e8-acquisition/version-6.2"/>
@@ -585,7 +578,7 @@
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work001" passive="#building001"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0001" passive="#b0001"/>
                </listRelation>
             </object>
          </listObject>
@@ -594,7 +587,7 @@
             <head>Manifestations gravées (plaques)</head>
             <!-- Voir pour le nommage des @xml:id des objets -->
             <!-- attribut @type : floorPlan, sitePlan, perspectiveView, elevation, crossSection -->
-            <object xml:id="plate001" type="perspectiveView">
+            <object xml:id="p0001" type="perspectiveView">
                <objectIdentifier>
                   <objectName>Plaque de la Vue perspective de l’hôtel Thélusson depuis la grotte</objectName>
                </objectIdentifier>
@@ -617,17 +610,22 @@
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
                      <date>1778</date>
                      <!-- définir les rôles des participants -->
-                     <!-- attribut @type : engraver -->
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="engraver">Abraham Jacobsz Hulk</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Abraham Jacobsz Hulk</persName>
+                        <role>Graveur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work001" passive="#plate001"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0001" passive="#p0001"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate002" type="floorPlan">
+            <object xml:id="p0002" type="floorPlan">
                <objectIdentifier>
                   <objectName>Plaque du Plan du Rez-de-Chaussée de la maison de Madame de Thelusson, rue de Provence</objectName>
                </objectIdentifier>
@@ -645,16 +643,22 @@
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
                      <date>1778</date>
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="engraver">Abraham Jacobsz Hulk</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Abraham Jacobsz Hulk</persName>
+                        <role>Graveur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work001" passive="#plate002"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0001" passive="#p0002"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate003" type="perspectiveView">
+            <object xml:id="p0003" type="perspectiveView">
                <objectIdentifier>
                   <objectName>Plaque de la Vue perspective de l’entrée de la maison de Madame de Thelusson</objectName>
                </objectIdentifier>
@@ -672,16 +676,22 @@
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
                      <date>1778</date>
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="engraver">Abraham Jacobsz Hulk</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Abraham Jacobsz Hulk</persName>
+                        <role>Graveur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work001" passive="#plate003"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0001" passive="#p0003"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate004" type="sitePlan" subtype="floorPlan">
+            <object xml:id="p0004" type="sitePlan" subtype="floorPlan">
                <objectIdentifier>
                   <objectName>Plaque du Plan de situation montrant le boulevard, la place Vendôme et le marché des Jacobins et plan du théâtre des Capucines</objectName>
                </objectIdentifier>
@@ -698,15 +708,18 @@
                </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate004"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0002" passive="#p0004"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate005" type="floorPlan">
+            <object xml:id="p0005" type="floorPlan">
                <objectIdentifier>
                   <objectName>Plaque du Plan du théâtre des Capucines</objectName>
                </objectIdentifier>
@@ -723,15 +736,18 @@
                </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate005"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0002" passive="#p0005"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate006" type="floorPlan">
+            <object xml:id="p0006" type="floorPlan">
                <objectIdentifier>
                   <objectName>Plaque du Plan du théâtre des Capucines</objectName>
                </objectIdentifier>
@@ -748,15 +764,18 @@
                </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate006"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0002" passive="#p0006"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate007" type="floorPlan">
+            <object xml:id="p0007" type="floorPlan">
                <objectIdentifier>
                   <objectName>Plaque du Plan du théâtre des Capucines</objectName>
                </objectIdentifier>
@@ -773,15 +792,18 @@
                </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate007"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0002" passive="#p0007"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate008" type="floorPlan">
+            <object xml:id="p0008" type="floorPlan">
                <objectIdentifier>
                   <objectName>Plaque du Plan du théâtre des Capucines</objectName>
                </objectIdentifier>
@@ -798,15 +820,18 @@
                </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate008"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0002" passive="#p0008"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate009" type="floorPlan">
+            <object xml:id="p0009" type="floorPlan">
                <objectIdentifier>
                   <objectName>Plaque du Plan à trois niveaux du théâtre des Capucines</objectName>
                </objectIdentifier>
@@ -823,15 +848,18 @@
                </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate009"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0002" passive="#p0009"/>
                </listRelation>
             </object>
             
-            <object xml:id="plate010" type="elevation">
+            <object xml:id="p0010" type="elevation">
                <objectIdentifier>
                   <objectName>Plaque de l'évélation latérale et de l'élévation principale</objectName>
                </objectIdentifier>
@@ -848,12 +876,18 @@
                </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="engraver">van Maëlle</persName>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                        <role>Dessinateur</role>
+                     </participant>
+                     <participant>
+                        <persName ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2" key="P14-carried-out-by">van Maëlle</persName>
+                        <role>Graveur</role>
+                     </participant>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate010"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0002" passive="#p0010"/>
                </listRelation>
             </object>
          </listObject>
