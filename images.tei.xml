@@ -38,7 +38,7 @@
                   <!-- attributs du système att.canonical : @key pour préciser le nom de l'entité ou du vocabulaire
                                                             @ref pour indiquer son uri -->
                   <!-- category correspond soit à l'entité E22 Human-Made Object soit à E20 Biological Object -->
-                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
                   <!-- classification est répétable -->
                   <!-- définir le vocabulaire à utiliser -->
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
@@ -61,12 +61,6 @@
                            <watermark/>
                         </support>
                         <extent>
-                           <!-- dimensions de la planche du recueil 
-                                pas forcément utile de répéter les dimensions de la page du recueil puisque cela sera indiqué dans le header -->
-                           <dimensions type="albumPlate" unit="cm">
-                              <height>nn</height>
-                              <width>nn</width>
-                           </dimensions>
                            <!-- dimensions de la feuille imprimée -->
                            <dimensions type="sheet" unit="cm">
                               <height>nn</height>
@@ -95,11 +89,10 @@
                   <acquisition/>
                </history>
                <listRelation>
-                  <!-- exemple de relation -->
                   <!-- attributs : @type précise le nom du modèle conceptuel ou alors indiquer ici le nom de l'entité
                                    @key et @ref pour identifier l'entité 
                                    @active correspond au sujet et @passive à l'objet (relation S-P-O) -->
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate00X"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate001"/>
                </listRelation>
             </object>
 
@@ -110,7 +103,7 @@
                   <idno>FolRes169-pl051</idno>
                </objectIdentifier>
                <objectClassification>
-                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
                </objectClassification>
                <physDesc>
@@ -124,10 +117,6 @@
                            <stamp>estampille de la Bibliothèque d'Art et d'Archéologie</stamp>
                         </support>
                         <extent>
-                           <dimensions type="albumPlate" unit="cm">
-                              <height>nn</height>
-                              <width>nn</width>
-                           </dimensions>
                            <dimensions type="sheet" unit="cm">
                               <height>nn</height>
                               <width>nn</width>
@@ -146,7 +135,7 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate00XX"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate002"/>
                </listRelation>
             </object>
 
@@ -157,7 +146,7 @@
                   <idno>FolRes169-pl052</idno>
                </objectIdentifier>
                <objectClassification>
-                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
                </objectClassification>
                <physDesc>
@@ -171,10 +160,6 @@
                            <stamp>estampille des collections Jacques Doucet</stamp>
                         </support>
                         <extent>
-                           <dimensions type="albumPlate" unit="cm">
-                              <height>nn</height>
-                              <width>nn</width>
-                           </dimensions>
                            <dimensions type="sheet" unit="cm">
                               <height>nn</height>
                               <width>nn</width>
@@ -193,7 +178,315 @@
                   </objectDesc>
                </physDesc>
                <listRelation>
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate00XXX"/>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#FolRes169-pl050" passive="#plate003"/>
+               </listRelation>
+            </object>
+            
+            <!-- exemple d'encodage des planches se référant au théâtre des Capucines (ex. BHVP - 1 Res 122) -->
+            <object xml:id="1Res122-pl049">
+               <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0084.simple.selectedTab=thumbnail -->
+               <objectIdentifier>
+                  <objectName type="forged">Plan de situation montrant le boulevard, la place Vendôme et le marché des Jacobins et plan du théâtre des Capucines</objectName>
+                  <idno>1Res122-pl049</idno>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille de la collection Bibliothèque Historique de la Ville de Paris</stamp>
+                        </support>
+                        <extent>
+                           <dimensions type="sheet" unit="cm">
+                              <height>59</height>
+                              <width>42</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>45,5</height>
+                              <width>24</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <figure place="above"><desc>Plan de situation montrant le boulevard, la place Vendôme et le marché des Jacobins</desc></figure>
+                           <figure place="below"><desc>Plan du théâtre des Capucines</desc></figure>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <listRelation>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl049" passive="#plate004"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="1Res122-pl050">
+               <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0086.simple.selectedTab=thumbnail -->
+               <objectIdentifier>
+                  <objectName type="forged">Plan du théâtre des Capucines</objectName>
+                  <idno>1Res122-pl050</idno>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille de la collection Bibliothèque Historique de la Ville de Paris</stamp>
+                        </support>
+                        <extent>
+                           <dimensions type="sheet" unit="cm">
+                              <height>59</height>
+                              <width>42</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>38,5</height>
+                              <width>27</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <listRelation>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl050" passive="#plate005"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="1Res122-pl051">
+               <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0088.simple.selectedTab=thumbnail -->
+               <objectIdentifier>
+                  <objectName type="forged">Plan du théâtre des Capucines</objectName>
+                  <idno>1Res122-pl051</idno>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille de la collection Bibliothèque Historique de la Ville de Paris</stamp>
+                        </support>
+                        <extent>
+                           <dimensions type="sheet" unit="cm">
+                              <height>59</height>
+                              <width>42</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>38</height>
+                              <width>28</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <listRelation>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl051" passive="#plate006"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="1Res122-pl052">
+               <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0090.simple.selectedTab=thumbnail -->
+               <objectIdentifier>
+                  <objectName type="forged">Plan du théâtre des Capucines</objectName>
+                  <idno>1Res122-pl052</idno>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille de la collection Bibliothèque Historique de la Ville de Paris</stamp>
+                        </support>
+                        <extent>
+                           <dimensions type="sheet" unit="cm">
+                              <height>59</height>
+                              <width>42</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>38,5</height>
+                              <width>28,5</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <listRelation>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl052" passive="#plate007"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="1Res122-pl053">
+               <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0092.simple.selectedTab=thumbnail -->
+               <objectIdentifier>
+                  <objectName type="forged">Plan du théâtre des Capucines</objectName>
+                  <idno>1Res122-pl053</idno>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille de la collection Bibliothèque Historique de la Ville de Paris</stamp>
+                        </support>
+                        <extent>
+                           <dimensions type="sheet" unit="cm">
+                              <height>59</height>
+                              <width>42</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>40</height>
+                              <width>27,5</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <listRelation>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl053" passive="#plate008"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="1Res122-pl054">
+               <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0094.simple.selectedTab=thumbnail -->
+               <objectIdentifier>
+                  <objectName type="forged">Plan à trois niveaux du théâtre des Capucines</objectName>
+                  <idno>1Res122-pl054</idno>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille de la collection Bibliothèque Historique de la Ville de Paris</stamp>
+                        </support>
+                        <extent>
+                           <dimensions type="sheet" unit="cm">
+                              <height>42</height>
+                              <width>59</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>25</height>
+                              <width>41,5</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <listRelation>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl054" passive="#plate009"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="1Res122-pl055">
+               <!-- https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0094.simple.selectedTab=thumbnail -->
+               <objectIdentifier>
+                  <objectName>Elévation latérale. Elévation principale</objectName>
+                  <idno>1Res122-pl055</idno>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                     <supportDesc>
+                        <support>
+                           <material>papier...</material>
+                           <stamp>estampille de la collection Bibliothèque Historique de la Ville de Paris</stamp>
+                        </support>
+                        <extent>
+                           <dimensions type="sheet" unit="cm">
+                              <height>42</height>
+                              <width>59</width>
+                           </dimensions>
+                           <dimensions type="plate" unit="cm">
+                              <height>27</height>
+                              <width>43</width>
+                           </dimensions>
+                        </extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <figure place="above"><desc>Elévation latérale</desc></figure>
+                           <figure place="below"><desc>Elévation principale</desc></figure>
+                           <fw place="bottomLeft">Le Doux Architecte du Roi</fw>
+                           <fw place="bottomRight">Gravé par van Maëlle</fw>
+                           <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+               <listRelation>
+                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#1Res122-pl055" passive="#plate010"/>
                </listRelation>
             </object>
          </listObject>
@@ -201,21 +494,44 @@
          <listObject type="works">
             <head>Oeuvres</head>
             <!-- Voir pour le nommage des @xml:id des objets -->
-            <object xml:id="workHotelThelusson">
+            <object xml:id="work001">
                <objectIdentifier>
                   <objectName>Hôtel de Thélusson</objectName>
                </objectIdentifier>
                <objectClassification>
-                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <category key="E28-conceptual-object" ref="http://www.cidoc-crm.org/Entity/e28-conceptual-object/version-6.2"><desc>Conceptual Object</desc></category>
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Hôtel particulier</classification>
                </objectClassification>
-               <!-- ajouter commanditaire -->
                <listEvent>
                   <!-- Les événements/activités liées à une oeuvre peuvent être listés dans listEvent -->
                   <!-- attributs : @key, @ref et @type pour identifier l'entité -->
                   <event type="CRM" key="E65-creation" ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2">
                      <date>1778</date>
-                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                     <!-- définir les rôles des participants -->
+                     <!-- attribut @type : creator ? -->
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" type="creator">Claude Nicolas Ledoux</persName>
+                  </event>
+                  <!-- voir pour l'événement lié à la commande @subtype : order ou finance ? -->
+                  <event type="CRM" subtype="order" key="E7-activity" ref="http://www.cidoc-crm.org/Entity/e7-activity/version-6.2">
+                     <!-- définir les rôles des participants -->
+                     <!-- attribut @type : patron ? -->
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" type="patron">Marie-Jeanne Girardot de Vermenoux</persName>
+                     <desc>Marie-Jeanne Girardot de Vermenoux commande l'hôtel de Thélusson à Claude-Nicolas Ledoux</desc>
+                  </event>
+               </listEvent>
+            </object>
+            
+            <object xml:id="work002">
+               <objectIdentifier>
+                  <objectName>Théâtre des Capucines</objectName>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E28-conceptual-object" ref="http://www.cidoc-crm.org/Entity/e28-conceptual-object/version-6.2"><desc>Conceptual Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Théâtre</classification>
+               </objectClassification>
+               <listEvent>
+                  <event type="CRM" key="E65-creation" ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2">
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" type="creator">Claude Nicolas Ledoux</persName>
                   </event>
                </listEvent>
             </object>
@@ -224,29 +540,52 @@
          <listObject type="buildings">
             <head>Édifices</head>
             <!-- Voir pour le nommage des @xml:id des objets -->
-            <object xml:id="buildingHotelThelusson">
+            <object xml:id="building001">
                <objectIdentifier>
                   <objectName>Hôtel de Thélusson</objectName>
                </objectIdentifier>
                <objectClassification>
-                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Hôtel particulier</classification>
                </objectClassification>
-               <place></place>
+               <!-- Voir pour l'adresse -->
+               <history>
+                  <origin>
+                     <placeName>
+                        <address>
+                           <street>30 rue de Provence</street>
+                           <settlement>Paris</settlement>
+                           <country>France</country>
+                        </address>
+                     </placeName>
+                  </origin>
+               </history>
                <listEvent>
-                  <!-- types d'événements : commande, production, modification, desctuction -->
+                  <!-- types d'événements : commande, production, acquisition, modification, desctuction -->
+                  <!-- voir pour l'événement lié à la commande @subtype : order ou finance ? -->
+                  <event type="CRM" subtype="order" key="E7-activity" ref="http://www.cidoc-crm.org/Entity/e7-activity/version-6.2">
+                     <!-- définir les rôles des participants -->
+                     <!-- attribut @type : patron ? -->
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" type="patron">Marie-Jeanne Girardot de Vermenoux</persName>
+                     <desc>Marie-Jeanne Girardot de Vermenoux commande l'hôtel de Thélusson à Claude-Nicolas Ledoux</desc>
+                  </event>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
                      <date>1778</date>
-                     <persName role=""/>
-                     <placeName/>
+                     <!-- définir les rôles des participants -->
+                     <!-- attribut @type : architect -->
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="architect">Claude Nicolas Ledoux</persName>
+                     <!-- Quelle précision dans le lieu au niveau de l'événement ? -->
+                     <placeName>Paris</placeName>
                   </event>
+                  <event type="CRM" key="E8-acquisition" ref="http://www.cidoc-crm.org/Entity/e8-acquisition/version-6.2"/>
+                  <event type="CRM" key="E11-modification" ref="http://www.cidoc-crm.org/Entity/e11-modification/version-6.2"/>
                   <event type="CRM" key="E6-destruction" ref="http://www.cidoc-crm.org/Entity/e6-destruction/version-6.2">
                      <date>1826</date>
                      <desc>Détruit quand la rue Laffitte est prolongée jusqu’à la rue de la Victoire</desc>
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#workHotelThelusson" passive="#buildingHotelThelusson"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work001" passive="#building001"/>
                </listRelation>
             </object>
          </listObject>
@@ -254,21 +593,19 @@
          <listObject type="plates">
             <head>Manifestations gravées (plaques)</head>
             <!-- Voir pour le nommage des @xml:id des objets -->
-            <!-- attribut @type : floorPlan, perspectiveView, elevation, crossSection -->
-            <object xml:id="plate00X" type="perspectiveView">
+            <!-- attribut @type : floorPlan, sitePlan, perspectiveView, elevation, crossSection -->
+            <object xml:id="plate001" type="perspectiveView">
                <objectIdentifier>
                   <objectName>Plaque de la Vue perspective de l’hôtel Thélusson depuis la grotte</objectName>
                </objectIdentifier>
                <objectClassification>
-                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2">Human-Made Object</category>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
                </objectClassification>
                <!-- Est-ce qu'on ajoute le médium ici ? -->
                <physDesc>
                   <objectDesc>
-                     <!-- description matérielle -->
                      <mediumDesc>
-                        <!-- description de la technique -->
                         <!-- attributs : @type pour préciser "main" ou "sub" quand il y a plusieurs techniques 
                                          @key pour le nom du vocabulaire
                                          @ref pour indiquer l'uri du vocabulaire -->
@@ -286,14 +623,25 @@
                   </event>
                </listEvent>
                <listRelation>
-                  <!-- exemple de relation -->
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#workHotelThelusson" passive="#plate00X"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work001" passive="#plate001"/>
                </listRelation>
             </object>
-            <object xml:id="plate00XX" type="floorPlan">
+            
+            <object xml:id="plate002" type="floorPlan">
                <objectIdentifier>
                   <objectName>Plaque du Plan du Rez-de-Chaussée de la maison de Madame de Thelusson, rue de Provence</objectName>
                </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure ...</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
                      <date>1778</date>
@@ -302,13 +650,25 @@
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#workHotelThelusson" passive="#plate00XX"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work001" passive="#plate002"/>
                </listRelation>
             </object>
-            <object xml:id="plate00XXX" type="perspectiveView">
+            
+            <object xml:id="plate003" type="perspectiveView">
                <objectIdentifier>
                   <objectName>Plaque de la Vue perspective de l’entrée de la maison de Madame de Thelusson</objectName>
                </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure ...</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
                <listEvent>
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
                      <date>1778</date>
@@ -317,7 +677,183 @@
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#workHotelThelusson" passive="#plate00XXX"/>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work001" passive="#plate003"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="plate004" type="sitePlan" subtype="floorPlan">
+               <objectIdentifier>
+                  <objectName>Plaque du Plan de situation montrant le boulevard, la place Vendôme et le marché des Jacobins et plan du théâtre des Capucines</objectName>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
+               <listEvent>
+                  <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                  </event>
+               </listEvent>
+               <listRelation>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate004"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="plate005" type="floorPlan">
+               <objectIdentifier>
+                  <objectName>Plaque du Plan du théâtre des Capucines</objectName>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
+               <listEvent>
+                  <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                  </event>
+               </listEvent>
+               <listRelation>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate005"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="plate006" type="floorPlan">
+               <objectIdentifier>
+                  <objectName>Plaque du Plan du théâtre des Capucines</objectName>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
+               <listEvent>
+                  <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                  </event>
+               </listEvent>
+               <listRelation>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate006"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="plate007" type="floorPlan">
+               <objectIdentifier>
+                  <objectName>Plaque du Plan du théâtre des Capucines</objectName>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
+               <listEvent>
+                  <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                  </event>
+               </listEvent>
+               <listRelation>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate007"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="plate008" type="floorPlan">
+               <objectIdentifier>
+                  <objectName>Plaque du Plan du théâtre des Capucines</objectName>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
+               <listEvent>
+                  <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                  </event>
+               </listEvent>
+               <listRelation>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate008"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="plate009" type="floorPlan">
+               <objectIdentifier>
+                  <objectName>Plaque du Plan à trois niveaux du théâtre des Capucines</objectName>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
+               <listEvent>
+                  <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                  </event>
+               </listEvent>
+               <listRelation>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate009"/>
+               </listRelation>
+            </object>
+            
+            <object xml:id="plate010" type="elevation">
+               <objectIdentifier>
+                  <objectName>Plaque de l'évélation latérale et de l'élévation principale</objectName>
+               </objectIdentifier>
+               <objectClassification>
+                  <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
+               </objectClassification>
+               <physDesc>
+                  <objectDesc>
+                     <mediumDesc>
+                        <medium key="nomVocabulaire" ref="lienVocabulaire">gravure sur cuivre</medium>
+                     </mediumDesc>
+                  </objectDesc>
+               </physDesc>
+               <listEvent>
+                  <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="">Claude Nicolas Ledoux</persName>
+                     <persName ref="http://www.cidoc-crm.org/node/4435" key="P14-carried-out-by" role="engraver">van Maëlle</persName>
+                  </event>
+               </listEvent>
+               <listRelation>
+                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#work002" passive="#plate010"/>
                </listRelation>
             </object>
          </listObject>
