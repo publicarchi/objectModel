@@ -20,7 +20,7 @@
    <text>
       <body>
          <listObject type="albumPlates">
-            <!-- type albumPlates ou Items ? ou alors est-ce qu'on type directement l'objet ? -->
+            <!-- type albumPlates ou sheet ? -->
             <head>Planches du recueil</head>
             <!-- première liste d'objets correspond aux planches du recueil -->
 
@@ -33,6 +33,15 @@
                   <!-- quand la planche a une cote, la préciser dans idno -->
                   <idno>FolRes169-pl050</idno>
                </objectIdentifier>
+               <!-- lien vers l'image numérisée et d'autres sources -->
+               <additional>
+                  <surrogates>
+                     <ref></ref>
+                  </surrogates>
+                  <listBibl>
+                     <bibl></bibl>
+                  </listBibl>
+               </additional>
                <objectClassification>
                   <!-- informations relatives à la catégorisation et à la classification de l'objet -->
                   <!-- attributs du système att.canonical : @key pour préciser le nom de l'entité ou du vocabulaire
@@ -88,12 +97,17 @@
                   <provenance/>
                   <acquisition/>
                </history>
+               <!-- espace de notes pour compléter la notice -->
+               <note type="">
+                  <p></p>
+               </note>
                <listRelation>
                   <!-- attributs : @type précise le nom du modèle conceptuel ou alors indiquer ici le nom de l'entité
                                    @key et @ref pour identifier l'entité 
                                    @active correspond au sujet et @passive à l'objet (relation S-P-O) -->
                   <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0001" passive="#p0001"/>
                </listRelation>
+               
             </object>
 
             <object xml:id="s0002">
@@ -546,21 +560,26 @@
                <objectIdentifier>
                   <objectName>Hôtel de Thélusson</objectName>
                </objectIdentifier>
+               <!-- indications de sources ou reproductions -->
+               <additional>
+                  <surrogates></surrogates>
+                  <listBibl>
+                     <bibl></bibl>
+                  </listBibl>
+               </additional>
                <objectClassification>
                   <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Hôtel particulier</classification>
                </objectClassification>
-               <!-- Voir pour l'adresse -->
                <location>
+                  <settlement>Paris</settlement>
+                  <country>France</country>
                   <address>
                      <street>30 rue de Provence</street>
-                     <settlement>Paris</settlement>
-                     <country>France</country>
                   </address>
                </location>
                <listEvent>
                   <!-- types d'événements : production, acquisition, modification, desctuction -->
-                  <!-- voir pour l'événement lié à la commande @subtype : order ou finance ? -->
                   <event type="CRM" key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
                      <date>1778</date>
                      <!-- définir les rôles des participants -->
@@ -586,6 +605,7 @@
          <listObject type="plates">
             <head>Manifestations gravées (plaques)</head>
             <!-- Voir pour le nommage des @xml:id des objets -->
+            <!-- peut être enlever le typage et l'indiquer dans objectClassification -->
             <!-- attribut @type : floorPlan, sitePlan, perspectiveView, elevation, crossSection -->
             <object xml:id="p0001" type="perspectiveView">
                <objectIdentifier>
@@ -595,7 +615,10 @@
                   <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Gravure</classification>
                </objectClassification>
-               <!-- Est-ce qu'on ajoute le médium ici ? -->
+               <!-- à vérifier : 2nde classification plus précise qui permettrait d'indiquer la typologie des gravures -->
+               <objectClassification>
+                  <classification key="nomVocabulaire" ref="lienVocabulaire">Vue perspective</classification>
+               </objectClassification>
                <physDesc>
                   <objectDesc>
                      <mediumDesc>
