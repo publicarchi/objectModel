@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="ODD/oddObjectModel.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -33,15 +31,6 @@
                   <!-- quand la planche a une cote, la préciser dans idno -->
                   <idno>FolRes169-pl050</idno>
                </objectIdentifier>
-               <!-- lien vers l'image numérisée et d'autres sources -->
-               <additional>
-                  <surrogates>
-                     <ref></ref>
-                  </surrogates>
-                  <listBibl>
-                     <bibl></bibl>
-                  </listBibl>
-               </additional>
                <objectClassification>
                   <!-- informations relatives à la catégorisation et à la classification de l'objet -->
                   <!-- attributs du système att.canonical : @key pour préciser le nom de l'entité ou du vocabulaire
@@ -97,8 +86,17 @@
                   <provenance/>
                   <acquisition/>
                </history>
+               <!-- lien vers l'image numérisée et d'autres sources -->
+               <additional>
+                  <surrogates>
+                     <ref></ref>
+                  </surrogates>
+                  <listBibl>
+                     <bibl></bibl>
+                  </listBibl>
+               </additional>
                <!-- espace de notes pour compléter la notice -->
-               <note type="">
+               <note type="x">
                   <p></p>
                </note>
                <listRelation>
@@ -107,7 +105,6 @@
                                    @active correspond au sujet et @passive à l'objet (relation S-P-O) -->
                   <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0001" passive="#p0001"/>
                </listRelation>
-               
             </object>
 
             <object xml:id="s0002">
@@ -230,7 +227,9 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <figure place="above"><desc>Plan de situation montrant le boulevard, la place Vendôme et le marché des Jacobins</desc></figure>
+                           <figure place="above">
+                              <desc>Plan de situation montrant le boulevard, la place Vendôme et le marché des Jacobins</desc>
+                           </figure>
                            <figure place="below"><desc>Plan du théâtre des Capucines</desc></figure>
                            <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
                         </layout>
@@ -560,13 +559,6 @@
                <objectIdentifier>
                   <objectName>Hôtel de Thélusson</objectName>
                </objectIdentifier>
-               <!-- indications de sources ou reproductions -->
-               <additional>
-                  <surrogates></surrogates>
-                  <listBibl>
-                     <bibl></bibl>
-                  </listBibl>
-               </additional>
                <objectClassification>
                   <category key="E22-human-made-object" ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"><desc>Human-Made Object</desc></category>
                   <classification key="nomVocabulaire" ref="lienVocabulaire">Hôtel particulier</classification>
@@ -589,8 +581,12 @@
                      </participant>
                      <placeName>Paris</placeName>
                   </event>
-                  <event type="CRM" key="E8-acquisition" ref="http://www.cidoc-crm.org/Entity/e8-acquisition/version-6.2"/>
-                  <event type="CRM" key="E11-modification" ref="http://www.cidoc-crm.org/Entity/e11-modification/version-6.2"/>
+                  <event type="CRM" key="E8-acquisition" ref="http://www.cidoc-crm.org/Entity/e8-acquisition/version-6.2">
+                     <p></p>
+                  </event>
+                  <event type="CRM" key="E11-modification" ref="http://www.cidoc-crm.org/Entity/e11-modification/version-6.2">
+                     <p></p>
+                  </event>
                   <event type="CRM" key="E6-destruction" ref="http://www.cidoc-crm.org/Entity/e6-destruction/version-6.2">
                      <date>1826</date>
                      <desc>Détruit quand la rue Laffitte est prolongée jusqu’à la rue de la Victoire</desc>
