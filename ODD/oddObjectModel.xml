@@ -27,18 +27,191 @@
          <div1>
             <head>Introduction</head>
             <!-- A COMPLETER -->
-            <p></p>
+            <p/>
             <div2>
                <head>Design Principles</head>
                <!-- A COMPLETER -->
-               <p></p>
+               <p/>
             </div2>
          </div1>
          <div1>
             <head>Encoding Structure Presentation</head>
             <div2>
                <head>The Object Structure (<gi>object</gi>)</head>
+               <p>The <gi>object</gi> element contains a description of a physical or conceptual
+                  object. Several objects can be grouped in <gi>listObject</gi> in order to classify
+                  them.</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <listObject type="prints">
+                     <head>Prints</head>
+                     <object>Print 1</object>
+                     <object>Print 2</object>
+                  </listObject>
+               </egXML>
+               <p>It contains the following sections : <specList>
+                     <specDesc key="objectIdentifier"/>
+                     <specDesc key="objectClassification"/>
+                     <specDesc key="physDesc"/>
+                     <specDesc key="location"/>
+                     <specDesc key="history"/>
+                     <specDesc key="additional"/>
+                     <specDesc key="note"/>
+                     <specDesc key="listEvent"/>
+                     <specDesc key="listRelation"/>
+                  </specList></p>
+               <div3>
+                  <head>The object identifier (<gi>objectIdentifier</gi>)</head>
+                  <p>The <gi>objectIdentifier</gi> element groups one or more informations to
+                     identify the object described, like its name or title, its identifiers and
+                     informations about its repository.</p>
+                  <p>The name or the title of the object is encoded in the <gi>objectName</gi> tag
+                     and an identifier in the <gi>idno</gi> tag. If you wanted to fulfill
+                     informations about its repository, you can used the <gi>institution</gi>,
+                        <gi>repository</gi> and <gi>collection</gi> tags to identify it, and
+                     geographical tags like <gi>country</gi>, <gi>region</gi>, <gi>settlement</gi>
+                     or <gi>address</gi> to locate it.</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <objectIdentifier>
+                        <objectName>Plan du Rez-de-Chaussée de la maison de Madame de Thelusson, rue
+                           de Provence</objectName>
+                        <idno>FolRes169-pl051</idno>
+                        <institution>Institut national d'histoire de l'art</institution>
+                        <repository>Bibliothèque de l'INHA</repository>
+                        <country>France</country>
+                        <settlement>Paris</settlement>
+                     </objectIdentifier>
+                  </egXML>
+               </div3>
+               <div3>
+                  <head>The object classification (<gi>objectClassification</gi>)</head>
+                  <p>The new <gi>objectClassification</gi> element groups one or more
+                     classifications and typologies describing an object. It is repeatable in order
+                     to specify several levels of classification, the first one being general and
+                     the followings more specifics. It has two child elements : <specList>
+                        <specDesc key="classification"/>
+                        <specDesc key="category"/>
+                     </specList></p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <objectClassification>
+                        <category key="E22-human-made-object"
+                           ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"
+                              ><desc>Human-Made Object</desc></category>
+                        <classification key="paintings(visual-works)"
+                           ref="http://vocab.getty.edu/aat/300033618">Painting</classification>
+                     </objectClassification>
+                  </egXML>
+                  <div4>
+                     <head>Category (<gi>category</gi>)</head>
+                     <p>The <gi>category</gi> element indicates the broad category the object
+                        described belongs to. We recommend to use controlled vocabularies or
+                        thesaurus : you can fill its name in the <att>key</att> attribute and its
+                        URI in the <att>ref</att> attribute.</p>
+                  </div4>
+                  <div4>
+                     <head>Classification (<gi>classification</gi>)</head>
+                     <p>The new <gi>classification</gi> element identifies the classification that
+                        groups similar objects together on the basis of defined characteristics. In
+                        the same way we described the <gi>category</gi>element, we recommend to use
+                        controlled vocabularies or thesaurus : you can fill its name in the
+                           <att>key</att> attribute and its URI in the <att>ref</att> attribute.</p>
+                  </div4>
+               </div3>
+               <div3>
+                  <head>The physical description (<gi>physDesc</gi>)</head>
+                  <p>The <gi>physDesc</gi> element has a child <gi>objectDesc</gi> element that
+                     contains a physical description of the object. It can have three child elements :<specList>
+                        <specDesc key="mediumDesc"/>
+                        <specDesc key="supportDesc"/>
+                        <specDesc key="layoutDesc"/>
+                     </specList></p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <physDesc>
+                        <objectDesc>
+                           <mediumDesc>
+                              <medium key="copper-engraving(printing-process)"
+                                 ref="http://vocab.getty.edu/aat/300190531">gravure sur
+                                 cuivre</medium>
+                           </mediumDesc>
+                           <supportDesc>
+                              <support>
+                                 <material>papier</material>
+                                 <stamp>estampille de la collection Bibliothèque Historique de la
+                                    Ville de Paris</stamp>
+                              </support>
+                              <extent>
+                                 <dimensions type="sheet" unit="cm">
+                                    <height>42</height>
+                                    <width>59</width>
+                                 </dimensions>
+                                 <dimensions type="plate" unit="cm">
+                                    <height>25</height>
+                                    <width>41,5</width>
+                                 </dimensions>
+                              </extent>
+                           </supportDesc>
+                           <layoutDesc>
+                              <layout>
+                                 <desc>La planche a été découpée à la cuvette et collée au sein de
+                                    l’album</desc>
+                              </layout>
+                           </layoutDesc>
+                        </objectDesc>
+                     </physDesc>
+                  </egXML>
+                  <div4>
+                     <head>The medium description (mediumDesc)</head>
+                     <p>The new <gi>mediumDesc</gi> element describes the techniques used for the
+                        object in the new <gi>medium</gi> element. We recommend to use controlled
+                        vocabularies or thesaurus : you can fill its name in the <att>key</att>
+                        attribute and its URI in the <att>ref</att> attribute. Moreover, you can
+                        specify if the technique described is main or subsequent in the
+                           <att>type</att> attribute.</p>
+                  </div4>
+                  <div4>
+                     <head>The support description (supportDesc)</head>
+                     <p>The <gi>supportDesc</gi> describes the support (<gi>support</gi>) of the
+                        object and its dimensions (<gi>extend</gi>). In the case of paper object,
+                        you can specify if there is a stamp or a watermark in the elements of the
+                        same name. For the <gi>dimension</gi> element, we recommend to indicate the
+                        unit of measurement in the <att>unit</att> attribute.</p>
+                  </div4>
+                  <div4>
+                     <head>The layout description (layoutDesc)</head>
+                     <p>The <gi>layoutDesc</gi> element groups any information about the object
+                        layout, encoded in the <gi>desc</gi> element.</p>
+                  </div4>
+               </div3>
                <!-- A COMPLETER -->
+               <div3>
+                  <head>The object location (<gi>location</gi>)</head>
+                  <p/>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+               </div3>
+               <div3>
+                  <head>Historical informations about the object (<gi>history</gi>)</head>
+                  <p/>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+               </div3>
+               <div3>
+                  <head>Additional sources (<gi>additional</gi>)</head>
+                  <p/>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+               </div3>
+               <div3>
+                  <head>Notes (<gi>note</gi>)</head>
+                  <p/>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+               </div3>
+               <div3>
+                  <head>The list of events related to the object (<gi>listEvent</gi>)</head>
+                  <p/>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+               </div3>
+               <div3>
+                  <head>The list of object relations (<gi>listRelation</gi>)</head>
+                  <p/>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+               </div3>
             </div2>
          </div1>
          <div1>
@@ -53,27 +226,29 @@
                <moduleRef key="msdescription" except=""/>
                <moduleRef key="figures" except=""/>
                <moduleRef key="transcr" except=""/>
-              
+               <moduleRef key="drama" except=""/>
+
                <!-- New elements -->
                <elementSpec ident="mediumDesc" module="msdescription">
                   <gloss xml:lang="en">medium description</gloss>
-                  <desc xml:lang="en">contains a description of the materials of the object which is being described</desc>
+                  <desc xml:lang="en">contains a description of the materials of the object which is
+                     being described.</desc>
                   <classes>
                      <memberOf key="att.global"/>
                      <memberOf key="model.objectPart"/>
                   </classes>
                   <content>
                      <alternate minOccurs="1" maxOccurs="unbounded">
-                        <elementRef key="medium"/>  
+                        <elementRef key="medium"/>
                         <classRef key="model.global"/>
                         <classRef key="model.pLike"/>
                      </alternate>
                   </content>
                </elementSpec>
-               
+
                <elementSpec ident="medium" module="msdescription">
                   <gloss xml:lang="en">medium</gloss>
-                  <desc xml:lang="en">describes the materials of the object</desc>
+                  <desc xml:lang="en">describes the materials of the object.</desc>
                   <classes>
                      <memberOf key="att.global"/>
                      <memberOf key="att.canonical"/>
@@ -87,10 +262,10 @@
                      </alternate>
                   </content>
                </elementSpec>
-               
+
                <elementSpec ident="participant" module="namesdates">
                   <gloss xml:lang="en">participant</gloss>
-                  <desc xml:lang="en">provides information about participants of an event</desc>
+                  <desc xml:lang="en">provides information about participants of an event.</desc>
                   <classes>
                      <memberOf key="att.global"/>
                      <memberOf key="att.canonical"/>
@@ -107,10 +282,11 @@
                      </alternate>
                   </content>
                </elementSpec>
-               
+
                <elementSpec ident="objectClassification" module="namesdates">
                   <gloss xml:lang="en">object classification</gloss>
-                  <desc xml:lang="en">groups one or more classifications or categories concerning an object</desc>
+                  <desc xml:lang="en">groups one or more classifications or categories concerning an
+                     object.</desc>
                   <classes>
                      <memberOf key="att.global"/>
                      <memberOf key="att.typed"/>
@@ -126,10 +302,10 @@
                      </alternate>
                   </content>
                </elementSpec>
-               
+
                <elementSpec ident="classification" module="namesdates">
                   <gloss xml:lang="en">classification</gloss>
-                  <desc xml:lang="en">contains an individual descriptive classification</desc>
+                  <desc xml:lang="en">contains an individual descriptive classification.</desc>
                   <classes>
                      <memberOf key="att.global"/>
                      <memberOf key="att.canonical"/>
@@ -144,9 +320,12 @@
                      </alternate>
                   </content>
                </elementSpec>
-               
-               <classSpec type="model" ident="model.objectPart" module="msdescription"/>
-               
+
+               <classSpec type="model" ident="model.objectPart" module="msdescription">
+                  <desc xml:lang="en">groups elements which form part of the description of an
+                     object.</desc>
+               </classSpec>
+
                <!-- Modify elements -->
                <elementSpec ident="listRelation" mode="change">
                   <classes mode="change">
@@ -156,26 +335,26 @@
                      <memberOf key="model.objectPart"/>
                   </classes>
                </elementSpec>
-               
+
                <elementSpec ident="listEvent" mode="change">
                   <classes mode="change">
                      <memberOf key="model.placeLike"/>
                      <memberOf key="model.objectPart"/>
                   </classes>
                </elementSpec>
-               
+
                <elementSpec ident="event" mode="change">
                   <content>
                      <sequence>
                         <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                         <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
-                        <alternate>
-                           <classRef key="model.dateLike" minOccurs="1" maxOccurs="unbounded"/>
-                           <elementRef key="participant" minOccurs="1" maxOccurs="unbounded"/>
-                           <classRef key="model.nameLike.agent" minOccurs="1" maxOccurs="unbounded"/>
-                           <classRef key="model.placeStateLike" minOccurs="1" maxOccurs="unbounded"/>
-                           <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
-                           <classRef key="model.labelLike" minOccurs="1" maxOccurs="unbounded"/>
+                        <alternate minOccurs="0" maxOccurs="unbounded">
+                           <classRef key="model.dateLike"/>
+                           <elementRef key="participant"/>
+                           <classRef key="model.nameLike.agent"/>
+                           <classRef key="model.placeStateLike"/>
+                           <classRef key="model.pLike"/>
+                           <classRef key="model.labelLike"/>
                         </alternate>
                         <alternate minOccurs="0" maxOccurs="unbounded">
                            <classRef key="model.noteLike"/>
@@ -189,7 +368,7 @@
                      </sequence>
                   </content>
                </elementSpec>
-               
+
                <elementSpec ident="object" mode="change">
                   <classes mode="change">
                      <memberOf key="model.objectPart"/>
@@ -204,6 +383,7 @@
                            <sequence>
                               <elementRef key="msContents" minOccurs="0"/>
                               <elementRef key="physDesc" minOccurs="0"/>
+                              <elementRef key="location" minOccurs="0"/>
                               <elementRef key="history" minOccurs="0"/>
                               <elementRef key="additional" minOccurs="0"/>
                            </sequence>
@@ -217,11 +397,11 @@
                         <alternate minOccurs="0" maxOccurs="unbounded">
                            <classRef key="model.listLike"/>
                         </alternate>
-                        <elementRef key="object" minOccurs="0"/>
+                        <elementRef key="object" minOccurs="0" maxOccurs="unbounded"/>
                      </sequence>
                   </content>
                </elementSpec>
-               
+
                <elementSpec ident="objectDesc" mode="change">
                   <classes mode="change">
                      <memberOf key="model.objectPart"/>
@@ -237,46 +417,7 @@
                      </alternate>
                   </content>
                </elementSpec>
-               
-               <!-- A REVOIR -->
-               
-               <elementSpec ident="occupation" mode="change">
-                  <classes mode="change">
-                     <memberOf key="model.listLike"/>
-                  </classes>
-               </elementSpec>
-               
-               <elementSpec ident="org" mode="change">
-                  <classes mode="change">
-                     <memberOf key="model.listLike"/>
-                  </classes>
-               </elementSpec>
-               
-               <elementSpec ident="person" mode="change">
-                  <classes mode="change">
-                     <memberOf key="model.listLike"/>
-                     <memberOf key="model.placeStateLike"/>
-                  </classes>
-               </elementSpec>
-               
-               <elementSpec ident="persona" mode="change">
-                  <classes mode="change">
-                     <memberOf key="model.listLike"/>
-                  </classes>
-               </elementSpec>
-               
-               <elementSpec ident="personGrp" mode="change">
-                  <classes mode="change">
-                     <memberOf key="model.listLike"/>
-                  </classes>
-               </elementSpec>
-               
-               <elementSpec ident="place" mode="change">
-                  <classes mode="change">
-                     <memberOf key="model.listLike"/>
-                  </classes>
-               </elementSpec>
-               
+
                <elementSpec ident="role" mode="change">
                   <classes mode="change">
                      <memberOf key="att.canonical"/>
@@ -284,12 +425,11 @@
                      <memberOf key="model.persStateLike"/>
                   </classes>
                </elementSpec>
-               
+
                <elementSpec ident="category" mode="change">
                   <classes mode="change">
                      <memberOf key="att.canonical"/>
                      <memberOf key="att.typed"/>
-                     <memberOf key="model.objectLike"/>
                   </classes>
                </elementSpec>
             </schemaSpec>

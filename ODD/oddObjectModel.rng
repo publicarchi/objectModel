@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-06-04T15:56:28Z. .
+Schema generated from ODD source 2021-06-07T11:20:36Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -2567,13 +2567,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_listEvent"/>
          <ref name="tei_listPerson"/>
          <ref name="tei_listPlace"/>
-         <ref name="tei_occupation"/>
-         <ref name="tei_org"/>
          <ref name="tei_listRelation"/>
-         <ref name="tei_person"/>
-         <ref name="tei_persona"/>
-         <ref name="tei_personGrp"/>
-         <ref name="tei_place"/>
          <ref name="tei_listObject"/>
          <ref name="tei_listNym"/>
          <ref name="tei_table"/>
@@ -2586,13 +2580,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_listEvent"/>
          <ref name="tei_listPerson"/>
          <ref name="tei_listPlace"/>
-         <ref name="tei_occupation"/>
-         <ref name="tei_org"/>
          <ref name="tei_listRelation"/>
-         <ref name="tei_person"/>
-         <ref name="tei_persona"/>
-         <ref name="tei_personGrp"/>
-         <ref name="tei_place"/>
          <ref name="tei_listObject"/>
          <ref name="tei_listNym"/>
          <ref name="tei_table"/>
@@ -2604,13 +2592,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="tei_listEvent"/>
       <ref name="tei_listPerson"/>
       <ref name="tei_listPlace"/>
-      <ref name="tei_occupation"/>
-      <ref name="tei_org"/>
       <ref name="tei_listRelation"/>
-      <ref name="tei_person"/>
-      <ref name="tei_persona"/>
-      <ref name="tei_personGrp"/>
-      <ref name="tei_place"/>
       <ref name="tei_listObject"/>
       <ref name="tei_listNym"/>
       <ref name="tei_table"/>
@@ -2632,25 +2614,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_listPlace"/>
       </optional>
       <optional>
-         <ref name="tei_occupation"/>
-      </optional>
-      <optional>
-         <ref name="tei_org"/>
-      </optional>
-      <optional>
          <ref name="tei_listRelation"/>
-      </optional>
-      <optional>
-         <ref name="tei_person"/>
-      </optional>
-      <optional>
-         <ref name="tei_persona"/>
-      </optional>
-      <optional>
-         <ref name="tei_personGrp"/>
-      </optional>
-      <optional>
-         <ref name="tei_place"/>
       </optional>
       <optional>
          <ref name="tei_listObject"/>
@@ -2679,25 +2643,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_listPlace"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_occupation"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_org"/>
-      </zeroOrMore>
-      <zeroOrMore>
          <ref name="tei_listRelation"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_person"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_persona"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_personGrp"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_place"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="tei_listObject"/>
@@ -2726,25 +2672,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_listPlace"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="tei_occupation"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_org"/>
-      </oneOrMore>
-      <oneOrMore>
          <ref name="tei_listRelation"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_person"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_persona"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_personGrp"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_place"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_listObject"/>
@@ -2820,29 +2748,101 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="tei_model.stageLike">
       <choice>
          <ref name="tei_stage"/>
+         <ref name="tei_move"/>
+         <ref name="tei_view"/>
+         <ref name="tei_camera"/>
+         <ref name="tei_sound"/>
+         <ref name="tei_caption"/>
+         <ref name="tei_tech"/>
       </choice>
    </define>
    <define name="tei_model.stageLike_alternation">
       <choice>
          <ref name="tei_stage"/>
+         <ref name="tei_move"/>
+         <ref name="tei_view"/>
+         <ref name="tei_camera"/>
+         <ref name="tei_sound"/>
+         <ref name="tei_caption"/>
+         <ref name="tei_tech"/>
       </choice>
    </define>
    <define name="tei_model.stageLike_sequence">
       <ref name="tei_stage"/>
+      <ref name="tei_move"/>
+      <ref name="tei_view"/>
+      <ref name="tei_camera"/>
+      <ref name="tei_sound"/>
+      <ref name="tei_caption"/>
+      <ref name="tei_tech"/>
    </define>
    <define name="tei_model.stageLike_sequenceOptional">
       <optional>
          <ref name="tei_stage"/>
+      </optional>
+      <optional>
+         <ref name="tei_move"/>
+      </optional>
+      <optional>
+         <ref name="tei_view"/>
+      </optional>
+      <optional>
+         <ref name="tei_camera"/>
+      </optional>
+      <optional>
+         <ref name="tei_sound"/>
+      </optional>
+      <optional>
+         <ref name="tei_caption"/>
+      </optional>
+      <optional>
+         <ref name="tei_tech"/>
       </optional>
    </define>
    <define name="tei_model.stageLike_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="tei_stage"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_move"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_view"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_camera"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_sound"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_caption"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_tech"/>
+      </zeroOrMore>
    </define>
    <define name="tei_model.stageLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="tei_stage"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_move"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_view"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_camera"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_sound"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_caption"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_tech"/>
       </oneOrMore>
    </define>
    <define name="tei_model.entryPart">
@@ -2869,6 +2869,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_model.pLike"/>
          <ref name="tei_lg"/>
          <ref name="tei_sp"/>
+         <ref name="tei_spGrp"/>
       </choice>
    </define>
    <define name="tei_model.persStateLike">
@@ -2888,6 +2889,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_socecStatus"/>
          <ref name="tei_state"/>
          <ref name="tei_trait"/>
+         <ref name="tei_role"/>
          <ref name="tei_participant"/>
       </choice>
    </define>
@@ -3015,7 +3017,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_model.placeNamePart"/>
          <ref name="tei_climate"/>
          <ref name="tei_location"/>
-         <ref name="tei_person"/>
          <ref name="tei_population"/>
          <ref name="tei_state"/>
          <ref name="tei_terrain"/>
@@ -3027,7 +3028,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_model.placeNamePart_alternation"/>
          <ref name="tei_climate"/>
          <ref name="tei_location"/>
-         <ref name="tei_person"/>
          <ref name="tei_population"/>
          <ref name="tei_state"/>
          <ref name="tei_terrain"/>
@@ -3038,7 +3038,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="tei_model.placeNamePart_sequence"/>
       <ref name="tei_climate"/>
       <ref name="tei_location"/>
-      <ref name="tei_person"/>
       <ref name="tei_population"/>
       <ref name="tei_state"/>
       <ref name="tei_terrain"/>
@@ -3053,9 +3052,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="tei_location"/>
-      </optional>
-      <optional>
-         <ref name="tei_person"/>
       </optional>
       <optional>
          <ref name="tei_population"/>
@@ -3081,9 +3077,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_location"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_person"/>
-      </zeroOrMore>
-      <zeroOrMore>
          <ref name="tei_population"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -3105,9 +3098,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_location"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_person"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_population"/>
@@ -3307,7 +3297,13 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </choice>
    </define>
    <define name="tei_model.frontPart.drama">
-      <notAllowed/>
+      <choice>
+         <ref name="tei_set"/>
+         <ref name="tei_prologue"/>
+         <ref name="tei_epilogue"/>
+         <ref name="tei_performance"/>
+         <ref name="tei_castList"/>
+      </choice>
    </define>
    <define name="tei_model.pLike.front">
       <choice>
@@ -3401,6 +3397,13 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    </define>
    <define name="tei_model.catDescPart">
       <notAllowed/>
+   </define>
+   <define name="tei_model.castItemPart">
+      <choice>
+         <ref name="tei_role"/>
+         <ref name="tei_roleDesc"/>
+         <ref name="tei_actor"/>
+      </choice>
    </define>
    <define name="tei_model.addressLike">
       <choice>
@@ -3617,6 +3620,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_model.listLike"/>
          <ref name="tei_model.stageLike"/>
          <ref name="tei_model.qLike"/>
+         <ref name="tei_castList"/>
       </choice>
    </define>
    <define name="tei_model.common">
@@ -3780,7 +3784,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    </define>
    <define name="tei_model.objectLike">
       <choice>
-         <ref name="tei_category"/>
          <ref name="tei_object"/>
          <ref name="tei_listObject"/>
          <ref name="tei_classification"/>
@@ -9103,26 +9106,16 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
             <zeroOrMore>
                <ref name="tei_model.headLike"/>
             </zeroOrMore>
-            <choice>
-               <oneOrMore>
+            <zeroOrMore>
+               <choice>
                   <ref name="tei_model.dateLike"/>
-               </oneOrMore>
-               <oneOrMore>
                   <ref name="tei_participant"/>
-               </oneOrMore>
-               <oneOrMore>
                   <ref name="tei_model.nameLike.agent"/>
-               </oneOrMore>
-               <oneOrMore>
                   <ref name="tei_model.placeStateLike"/>
-               </oneOrMore>
-               <oneOrMore>
                   <ref name="tei_model.pLike"/>
-               </oneOrMore>
-               <oneOrMore>
                   <ref name="tei_model.labelLike"/>
-               </oneOrMore>
-            </choice>
+               </choice>
+            </zeroOrMore>
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.noteLike"/>
@@ -9466,32 +9459,46 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
       <element name="org">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organization) provides information about an identifiable organization such as a business, a tribe, or any other grouping of people. [13.2.2. Organizational Names]</a:documentation>
          <group>
+      
             <zeroOrMore>
                <ref name="tei_model.headLike"/>
             </zeroOrMore>
+      
             <choice>
+        
+          
                <zeroOrMore>
                   <ref name="tei_model.pLike"/>
                </zeroOrMore>
+          
+        
+        
                <zeroOrMore>
                   <choice>
                      <ref name="tei_model.labelLike"/>
                      <ref name="tei_model.nameLike"/>
                      <ref name="tei_model.placeLike"/>
                      <ref name="tei_model.orgPart"/>
-                     <ref name="tei_model.milestoneLike"/>
+	                    <ref name="tei_model.milestoneLike"/>
                   </choice>
                </zeroOrMore>
+        
             </choice>
+      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.noteLike"/>
                   <ref name="tei_model.biblLike"/>
+          
+          
                </choice>
             </zeroOrMore>
+      
+      
             <zeroOrMore>
                <ref name="tei_model.personLike"/>
             </zeroOrMore>
+      
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -9539,15 +9546,19 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
       <element name="person">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides information about an identifiable individual, for example a participant in a language interaction, or a person referred to in a historical source. [13.3.2. The Person Element 15.2.2. The Participant Description]</a:documentation>
          <choice>
+      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
+      
+      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.personPart"/>
                   <ref name="tei_model.global"/>
                </choice>
             </zeroOrMore>
+      
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
@@ -9590,10 +9601,10 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
    <define name="tei_persona">
       <element name="persona">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides information about one of the personalities identified for a given individual, where an individual has multiple personalities. [13.3.2. The Person Element]</a:documentation>
-         <choice>
+         <choice>   
             <oneOrMore>
                <ref name="tei_model.pLike"/>
-            </oneOrMore>
+            </oneOrMore>      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.personPart"/>
@@ -9643,15 +9654,19 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
       <element name="personGrp">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal group) describes a group of individuals treated as a single person for analytic purposes. [15.2.2. The Participant Description]</a:documentation>
          <choice>
+      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
+      
+      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.personPart"/>
                   <ref name="tei_model.global"/>
                </choice>
             </zeroOrMore>
+      
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.sortable.attributes"/>
@@ -9702,13 +9717,20 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
       <element name="place">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains data about a geographic location [13.3.4. Places]</a:documentation>
          <group>
+      
             <zeroOrMore>
                <ref name="tei_model.headLike"/>
             </zeroOrMore>
+      
             <choice>
+        
+          
                <zeroOrMore>
                   <ref name="tei_model.pLike"/>
                </zeroOrMore>
+          
+        
+        
                <zeroOrMore>
                   <choice>
                      <ref name="tei_model.labelLike"/>
@@ -9716,20 +9738,27 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
                      <ref name="tei_model.eventLike"/>
                   </choice>
                </zeroOrMore>
+        
             </choice>
+      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.noteLike"/>
                   <ref name="tei_model.biblLike"/>
                   <ref name="tei_idno"/>
+          
+          
                </choice>
             </zeroOrMore>
+      
+      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.placeLike"/>
                   <ref name="tei_listPlace"/>
                </choice>
             </zeroOrMore>
+      
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -10105,6 +10134,9 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                      <ref name="tei_physDesc"/>
                   </optional>
                   <optional>
+                     <ref name="tei_location"/>
+                  </optional>
+                  <optional>
                      <ref name="tei_history"/>
                   </optional>
                   <optional>
@@ -10123,9 +10155,9 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                   <ref name="tei_model.listLike"/>
                </choice>
             </zeroOrMore>
-            <optional>
+            <zeroOrMore>
                <ref name="tei_object"/>
-            </optional>
+            </zeroOrMore>
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.sortable.attributes"/>
@@ -13073,9 +13105,483 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number) ; 4] lineN
          <empty/>
       </element>
    </define>
+   <define name="tei_set">
+      <element name="set">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(setting) contains a description of the setting, time, locale, appearance, etc., of the action of a play, typically found in the front matter of a printed performance text (not a stage direction). [7.1. Front and Back Matter
+ ]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.headLike"/>
+                  <ref name="tei_model.global"/>
+               </choice>
+            </zeroOrMore>
+      
+            <zeroOrMore>
+               <group>
+          
+                  <ref name="tei_model.common"/>
+          
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+          
+               </group>
+            </zeroOrMore>
+      
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_prologue">
+      <element name="prologue">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the prologue to a drama, typically spoken by an actor out of character, possibly in association with a particular performance or venue. [7.1.2. Prologues and Epilogues 7.1. Front and Back Matter
+ ]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.divTop"/>
+                  <ref name="tei_model.global"/>
+               </choice>
+            </zeroOrMore>
+      
+            <oneOrMore>
+               <group>
+        
+                  <ref name="tei_model.common"/>
+        
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </oneOrMore>
+            <zeroOrMore>
+               <group>
+        
+                  <ref name="tei_model.divBottom"/>
+        
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_epilogue">
+      <element name="epilogue">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the epilogue to a drama, typically spoken by an actor out of character, possibly in association with a particular performance or venue. [7.1.2. Prologues and Epilogues 7.1. Front and Back Matter
+ ]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.divTop"/>
+                  <ref name="tei_model.global"/>
+               </choice>
+            </zeroOrMore>
+      
+            <oneOrMore>
+               <group>
+        
+                  <ref name="tei_model.common"/>
+        
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </oneOrMore>
+            <zeroOrMore>
+               <group>
+        
+                  <ref name="tei_model.divBottom"/>
+        
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_performance">
+      <element name="performance">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a section of front or back matter describing how a dramatic piece is to be performed in general or how it was performed on some specific occasion. [7.1.3. Records of Performances 7.1. Front and Back Matter
+ ]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.divTop"/>
+                  <ref name="tei_model.global"/>
+               </choice>
+            </zeroOrMore>
+      
+            <oneOrMore>
+               <group>
+        
+                  <ref name="tei_model.common"/>
+        
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </oneOrMore>
+            <zeroOrMore>
+               <group>
+        
+                  <ref name="tei_model.divBottom"/>
+        
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_castList">
+      <element name="castList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cast list) contains a single cast list or dramatis personae. [7.1.4. Cast Lists 7.1. Front and Back Matter
+ ]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.divTop"/>
+                  <ref name="tei_model.global"/>
+               </choice>
+            </zeroOrMore>
+      
+            <zeroOrMore>
+               <group>
+        
+                  <ref name="tei_model.common"/>
+        
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </zeroOrMore>
+            <oneOrMore>
+               <group>
+                  <choice>
+                     <ref name="tei_castItem"/>
+                     <ref name="tei_castGroup"/>
+                  </choice>
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </oneOrMore>
+            <zeroOrMore>
+               <group>
+        
+                  <ref name="tei_model.common"/>
+        
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_castGroup">
+      <element name="castGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cast list grouping) groups one or more individual castItem elements within a cast list. [7.1.4. Cast Lists]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.global"/>
+                  <ref name="tei_model.headLike"/>
+               </choice>
+            </zeroOrMore>
+      
+            <oneOrMore>
+               <group>
+                  <choice>
+                     <ref name="tei_castItem"/>
+                     <ref name="tei_castGroup"/>
+                     <ref name="tei_roleDesc"/>
+                  </choice>
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </oneOrMore>
+            <optional>
+               <group>
+                  <ref name="tei_trailer"/>
+        
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+        
+               </group>
+            </optional>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_castItem">
+      <element name="castItem">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cast list item) contains a single entry within a cast list, describing either a single role or a list of non-speaking roles. [7.1.4. Cast Lists]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_model.castItemPart"/>
+               <ref name="tei_model.phrase"/>
+               <ref name="tei_model.global"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="type"
+                       a:defaultValue="role">
+               <a:documentation>characterizes the cast item.</a:documentation>
+               <choice>
+                  <value>role</value>
+                  <a:documentation>the item describes a single role.</a:documentation>
+                  <value>list</value>
+                  <a:documentation>the item describes a list of non-speaking roles.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_role">
+      <element name="role">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the name of a dramatic role, as given in a cast list. [7.1.4. Cast Lists]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.canonical.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_roleDesc">
+      <element name="roleDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role description) describes a character's role in a drama. [7.1.4. Cast Lists]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_actor">
+      <element name="actor">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the name of an actor appearing within a cast list. [7.1.4. Cast Lists]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.canonical.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_spGrp">
+      <element name="spGrp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(speech group) contains a group of speeches or songs in a performance text presented in a source as constituting a single unit or number. [7.2.3. Grouped Speeches]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <ref name="tei_model.headLike"/>
+            </zeroOrMore>
+      
+      
+            <oneOrMore>
+               <choice>
+                  <ref name="tei_model.global"/>
+                  <ref name="tei_sp"/>
+                  <ref name="tei_model.stageLike"/>
+               </choice>
+            </oneOrMore>
+      
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.ascribed.directed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_move">
+      <element name="move">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(movement) marks the actual movement of one or more characters. [7.2.4. Stage Directions]</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.ascribed.directed.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the movement, for example as an entrance or exit.
+Suggested values include: 1] entrance; 2] exit; 3] onStage</a:documentation>
+               <choice>
+                  <value>entrance</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">character is entering the stage.</a:documentation>
+                  <value>exit</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">character is exiting the stage.</a:documentation>
+                  <value>onStage</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">character moves on stage</a:documentation>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="where">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the direction of a stage movement.
+Sample values include: 1] L (left) ; 2] R (right) ; 3] C (center) </a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="token">
+                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="perf">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(performance) identifies the performance or performances in which this movement occurred as specified by pointing to one or more performance elements.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_view">
+      <element name="view">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the visual context of some part of a screen play in terms of what the spectator sees, generally independent of any dialogue. [7.3.1. Technical Information 7.3. Other Types of Performance Text]</a:documentation>
+         <ref name="tei_macro.specialPara"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_camera">
+      <element name="camera">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes a particular camera angle or viewpoint in a screen play. [7.3.1. Technical Information 7.3. Other Types of Performance Text]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_sound">
+      <element name="sound">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes a sound effect or musical sequence specified within a screen play or radio script. [7.3.1. Technical Information 7.3. Other Types of Performance Text]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">categorizes the sound in some respect, e.g. as music, special effect, etc.</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="discrete">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether the sound overlaps the surrounding speeches or interrupts them.</a:documentation>
+               <choice>
+                  <data type="boolean"/>
+                  <choice>
+                     <value>unknown</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>inapplicable</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  </choice>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_caption">
+      <element name="caption">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the text of a caption or other text displayed as part of a film script or screenplay. [7.3.1. Technical Information 7.3. Other Types of Performance Text]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_tech">
+      <element name="tech">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(technical stage direction) describes a special-purpose stage direction that is not meant for the actors. [7.3.1. Technical Information]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">categorizes the technical stage direction.
+Suggested values include: 1] light; 2] sound; 3] prop; 4] block</a:documentation>
+               <choice>
+                  <value>light</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a lighting cue</a:documentation>
+                  <value>sound</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a sound cue</a:documentation>
+                  <value>prop</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a prop cue</a:documentation>
+                  <value>block</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a blocking instruction</a:documentation>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="perf">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(performance) points to one or more performance elements documenting the performance or performances to which this technical direction applies.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_mediumDesc">
       <element name="mediumDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(medium description) contains a description of the materials of the object which is being described</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(medium description) contains a description of the materials of the object which is being described.</a:documentation>
          <oneOrMore>
             <choice>
                <ref name="tei_medium"/>
@@ -13089,7 +13595,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number) ; 4] lineN
    </define>
    <define name="tei_medium">
       <element name="medium">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(medium) describes the materials of the object</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(medium) describes the materials of the object.</a:documentation>
          <oneOrMore>
             <choice>
                <text/>
@@ -13105,13 +13611,14 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number) ; 4] lineN
    </define>
    <define name="tei_participant">
       <element name="participant">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(participant) provides information about participants of an event</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(participant) provides information about participants of an event.</a:documentation>
          <oneOrMore>
             <choice>
                <text/>
                <ref name="tei_model.nameLike.agent"/>
                <ref name="tei_model.global"/>
                <ref name="tei_model.pLike"/>
+               <ref name="tei_role"/>
             </choice>
          </oneOrMore>
          <ref name="tei_att.global.attributes"/>
@@ -13122,7 +13629,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number) ; 4] lineN
    </define>
    <define name="tei_objectClassification">
       <element name="objectClassification">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(object classification) groups one or more classifications or categories concerning an object</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(object classification) groups one or more classifications or categories concerning an object.</a:documentation>
          <oneOrMore>
             <choice>
                <ref name="tei_category"/>
@@ -13138,7 +13645,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number) ; 4] lineN
    </define>
    <define name="tei_classification">
       <element name="classification">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(classification) contains an individual descriptive classification</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(classification) contains an individual descriptive classification.</a:documentation>
          <oneOrMore>
             <choice>
                <text/>
