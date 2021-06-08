@@ -593,7 +593,7 @@
                   </event>
                </listEvent>
                <listRelation>
-                  <relation type="LRM" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" active="#w0001" passive="#b0001"/>
+                  <relation type="LRM" active="#w0001" key="R3-is-realised-in" ref="http://www.cidoc-crm.org/Property/r3-is-realised-in"  passive="#b0001"/>
                </listRelation>
             </object>
          </listObject>

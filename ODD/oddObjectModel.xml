@@ -181,36 +181,109 @@
                         layout, encoded in the <gi>desc</gi> element.</p>
                   </div4>
                </div3>
-               <!-- A COMPLETER -->
                <div3>
                   <head>The object location (<gi>location</gi>)</head>
-                  <p/>
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                  <p>The <gi>location</gi> element defines the location of a property object. It has
+                     as child elements geographical tags like <gi>country</gi>, <gi>region</gi>,
+                        <gi>settlement</gi> or <gi>address</gi>.</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <location>
+                        <settlement>Paris</settlement>
+                        <country>France</country>
+                        <address>
+                           <street>30 rue de Provence</street>
+                        </address>
+                     </location>
+                  </egXML>
                </div3>
                <div3>
                   <head>Historical informations about the object (<gi>history</gi>)</head>
-                  <p/>
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                  <p>The <gi>history</gi> element describes the history of an object through
+                     informations about its acquisition (<gi>acquisition</gi>), provenance
+                        (<gi>provenance</gi> and origin (<gi>origin</gi>).</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <history>
+                        <acquisition><p>Legs fait au musée du Louvre en 1947</p></acquisition>
+                        <provenance><p>Collection de Lucien et Agathe Laveissière ; legs fait au
+                              musée du Louvre en 1947 (comité d'avril et conseil de décembre 1947)
+                              par leur neveu Jacques Lenté (1890-1967), en leur souvenir et en
+                              respect du legs fait par voie testamentaire le 28 novembre 1946 par
+                              Agathe Laveissière, née Delahalle (1870-1946).</p></provenance>
+                     </history>
+                  </egXML>
                </div3>
                <div3>
                   <head>Additional sources (<gi>additional</gi>)</head>
-                  <p/>
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                  <p>The <gi>additional</gi> element groups additional information like
+                     bibliographic sources, listed in the <gi>listBibl</gi> element, surrogate
+                     copies (<gi>surrogate</gi>), including its digitised version, and any
+                     administrative or curatorial information (<gi>adminInfo</gi>).</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <additional>
+                        <surrogates>
+                           <ref
+                              facs="https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0094.simple.selectedTab=thumbnail"
+                           />
+                        </surrogates>
+                        <listBibl>
+                           <bibl/>
+                        </listBibl>
+                     </additional>
+                  </egXML>
                </div3>
                <div3>
                   <head>Notes (<gi>note</gi>)</head>
-                  <p/>
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                  <p>The <gi>note</gi> element contains a note about any additional information
+                     about the object described.</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <!-- A COMPLETER -->
+                  </egXML>
                </div3>
                <div3>
                   <head>The list of events related to the object (<gi>listEvent</gi>)</head>
-                  <p/>
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                  <p>The <gi>listEvent</gi> element contains a list of event linked to an object. To
+                     specify the nature of each <gi>event</gi>, we recommend to use controlled
+                     vocabularies or thesaurus : you can fill its name in the <att>key</att>
+                     attribute and its URI in the <att>ref</att> attribute. You can describe more
+                     precisely an <gi>event</gi> with the following tags : <list>
+                        <item>The <gi>date</gi>element to indicate the date of the event.</item>
+                        <item>The <gi>placeName</gi> or <gi>location</gi> element to precise its
+                           location.</item>
+                        <item>The new <gi>participant</gi> element, which includes a
+                              <gi>persName</gi> or <gi>orgName</gi> and a <gi>role</gi>tags, to fill
+                           the name of the participant and its role.</item>
+                     </list>
+                  </p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <listEvent><event type="CRM" key="E12-production"
+                           ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+                           <date>1778</date>
+                           <participant>
+                              <persName
+                                 ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2"
+                                 key="P14-carried-out-by">Claude Nicolas Ledoux</persName>
+                              <role>Architecte</role>
+                           </participant>
+                           <placeName>Paris</placeName>
+                        </event></listEvent>
+                  </egXML>
                </div3>
                <div3>
                   <head>The list of object relations (<gi>listRelation</gi>)</head>
-                  <p/>
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                  <p>The <gi>listRelation</gi> element lists any relationships between the objects
+                     described. A relation (<gi>relation</gi>) could be described on the CIDOC-CRM
+                     model, following the semantic triple (RDF triple) logic composed of a subject,
+                     a predicate and an object. In order to compose a sentence, the subject is named
+                     in the <att>active</att> attribute, the predicate, which can refers to an
+                     ontology, is described in the <att>key</att> and <att>ref</att> attributes and
+                     the object is named in the <att>passive</att> attribute.</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <listRelation>
+                        <relation type="LRM" active="#w0001" key="R3-is-realised-in"
+                           ref="http://www.cidoc-crm.org/Property/r3-is-realised-in"
+                           passive="#b0001"/>
+                     </listRelation>
+                  </egXML>
                </div3>
             </div2>
          </div1>
