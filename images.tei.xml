@@ -73,6 +73,8 @@
                      </supportDesc>
                      <layoutDesc>
                         <!-- précisions sur la mise en page  -->
+                        <!-- ajout d'un attribut pour catégoriser la mise en page ? -->
+                        <!-- ajouter les coordonnées en @ de layout -->
                         <layout>
                            <desc>La planche a été découpée à la cuvette et collée au sein de l’album</desc>
                         </layout>
@@ -103,7 +105,7 @@
                   <!-- attributs : @type précise le nom du modèle conceptuel ou alors indiquer ici le nom de l'entité
                                    @key et @ref pour identifier l'entité 
                                    @active correspond au sujet et @passive à l'objet (relation S-P-O) -->
-                  <relation type="LRM" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of" active="#s0001" passive="#p0001"/>
+                  <relation type="LRM" active="#s0001" key="R7-is-example-of" ref="http://www.cidoc-crm.org/Property/r7-is-example-of"  passive="#p0001"/>
                </listRelation>
             </object>
 
