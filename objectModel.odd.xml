@@ -84,6 +84,35 @@
         <head>Conclusion</head>
         <p>As you will have understood, we have favored a simple customization that generally respects the content model of the TEI historical entities while preserving the backward compatibility of the model. All these proposals have been specified in ODD and documented online. Conversion scripts to CIDOC-CRM have been written in XQuery. From our point of view, this customization of the TEI seems to better serve the needs of the TEI for art history but could also benefit more widely the content models intended for the description of manuscripts. After all, inscribed texts are indeed cultural artifacts, and the possibilities currently offered by the TEI remain too limited for the description of illuminations in particular. We therefore invite the community to reflect on the object content model in connection with work on manuscript description.</p>
       </div>
+      <div>
+        <head>Bibliography</head>
+        <bibl>Allemang, Dean, James A Hendler, et Fabien Gandon. 2020. Semantic Web for the Working Ontologist: Effective Modeling for Linked Data, RDFS, and OWL.
+          « An &lt;object&gt; Element · Issue #327 · TEIC/TEI ». s. d. GitHub. Consulté le 29 mai 2021. https://github.com/TEIC/TEI/issues/327.</bibl>
+        <bibl>Bekiari, Chryssoula, George Bruseker, Martin Doerr, Christian-Emil Ore, Stephen Stead, et Athanasios Velios. 2021. « Definition of the CIDOC Conceptual Reference Model ». version 7.1.1. CIDOC CRM  Special Interest Group. http://www.cidoc-crm.org/version/version-7.1.1.</bibl>
+        <bibl>Burnard, Lou. 2013. « Resolving the Durand Conundrum ». Journal of the Text Encoding Initiative, no 6 (septembre). https://doi.org/10.4000/jtei.842.</bibl>
+        <bibl>———. 2020. « What Is TEI Conformance, and Why Should You Care? » Journal of the Text Encoding Initiative, no Issue 12 (mai). https://doi.org/10.4000/jtei.1777.</bibl>
+        <bibl>Carboni, Nicola. 2017. Documentation sémantique d’objets patrimoniaux à travers des représentations visuelles et iconographiques. https://hal.archives-ouvertes.fr/hal-01526781.</bibl>
+        <bibl>Carboni, Nicola, et Livio de Luca. 2017. « Towards a Semantic Documentation of Heritage Objects through Visual and Iconographical Representations ». International Information &amp; Library Review 49 (3): 207‑17. https://doi.org/10.1080/10572317.2017.1353374.</bibl>
+        <bibl>Ciotti, Fabio, et Francesca Tomasi. 2016. « Formal Ontologies, Linked Data, and TEI Semantics ». Journal of the Text Encoding Initiative, no 9 (septembre). https://doi.org/10.4000/jtei.1480.</bibl>
+        <bibl>Ciula, Arianna, et Øyvind Eide. 2014. « Reflections on cultural heritage and digital humanities: modelling in practice and theory ». In Proceedings of the First International Conference on Digital Access to Textual Cultural Heritage, 35‑41. DATeCH ’14. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/2595188.2595207.</bibl>
+        <bibl>Clavel, Thierry. 2019. « FRBR, RDA, BibFrame : comment prendre en compte ces nouveaux standards ? » In Réinformatiser une bibliothèque, édité par Anna Svenbro. La Boîte à outils. Villeurbanne: Presses de l’enssib. http://books.openedition.org/pressesenssib/6742.</bibl>
+        <bibl>« DOnnées Patrimoniales HEritage DAta ». 2020. Répertoire canadien d’information sur le patrimoine. https://chin-rcip.github.io/collections-model/.</bibl>
+        <bibl>Driscoll, M J. 2006. « XML Markup of Biographical and Prosopographical Data ». In TEI Day in Kyoto 2006, 75‑83. Kyoto Institute for Research in Humanities: Kyoto University. http://coe21.zinbun.kyoto-u.ac.jp/tei-day/TEIDayKyoto2006.pdf.</bibl>
+        <bibl>Eide, Øyvind. 2014. « Ontologies, Data Modeling, and TEI ». Journal of the Text Encoding Initiative, no 8 (décembre). https://doi.org/10.4000/jtei.1191.</bibl>
+        <bibl>Guillem, Anais, George Bruseker, et Paola Ronzino. 2017. « Process, Concept or Thing? Some Initial Considerations in the Ontological Modelling of Architecture ». International Journal on Digital Libraries 18 (4): 289‑99. https://doi.org/10.1007/s00799-016-0188-0.</bibl>
+        <bibl>Heath, Tom, et Christian Bizer. 2011a. Linked Data: Evolving the Web into a Global Data Space. 1. ed. Synthesis Lectures on the Semantic Web: Theory and Technology 1. San Rafael, Calif.: Morgan &amp; Claypool.</bibl>
+        <bibl>———. 2011b. « Linked Data: Evolving the Web into a Global Data Space ». Synthesis Lectures on the Semantic Web: Theory and Technology 1 (1): 1‑136. https://doi.org/10.2200/S00334ED1V01Y201102WBE001.</bibl>
+        <bibl>Jones, Ed, et Michele Seikel, éd. 2016. Linked data for cultural heritage. An ALCTS monograph. Chicago: ALA Editions, an imprint of the American Library Association.</bibl>
+        <bibl>« Linked Art ». s. d. Consulté le 2 avril 2020. https://linked.art/.</bibl>
+        <bibl>Newbury, David. s. d. « LOUD: Linked Open Usable Data and Linked.Art », 11.</bibl>
+        <bibl>Ore, Christian-Emil, et Øyvind Eide. 2009. « TEI and cultural heritage ontologies: Exchange of information? » Literary and Linguistic Computing 24 (2): 161‑72. https://doi.org/10.1093/llc/fqp010.</bibl>
+        <bibl>Øyvind, Eide. 2019. « Ontologies and Data Modeling ». In Shape of Data in Digital Humanities: Modeling Texts and Text-Based Resources., édité par Julia Flanders et Fotis Jannidis. Routledge.</bibl>
+        <bibl>Raybuck, Suzanne Michelle, et Sarah C. Stanley. 2019. « An Exploration of &lt;object&gt; using Antarctic Artifacts ». In . https://gams.uni-graz.at/o:tei2019.113.</bibl>
+        <bibl>« Swiss Art Research Infrastructure (SARI) ». s. d. Consulté le 4 mars 2021. https://swissartresearch.net/.</bibl>
+        <bibl>TEI Consortium. 2021. « Guidelines for Electronic Text Encoding and Interchange, P5 ». 2021. https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html.</bibl>
+        <bibl>Wittern, Christian, Arianna Ciula, et Conal Tuohy. 2009. « The making of TEI P5 ». Literary and Linguistic Computing 24 (3): 281‑96. https://doi.org/10.1093/llc/fqp017.</bibl>
+        <bibl>Wood, David, Marsha Zaidman, Luke Ruth, et Michael Hausenblas. 2014. Linked data: structured data on the Web. Shelter Island, NY: Manning.</bibl>
+      </div>
     </front>
     <body>
       <div>
@@ -500,35 +529,7 @@
       </div>
     </body>
     <back>
-      <div>
-        <head>Bibliography</head>
-        <bibl>Allemang, Dean, James A Hendler, et Fabien Gandon. 2020. Semantic Web for the Working Ontologist: Effective Modeling for Linked Data, RDFS, and OWL.
-        « An &lt;object&gt; Element · Issue #327 · TEIC/TEI ». s. d. GitHub. Consulté le 29 mai 2021. https://github.com/TEIC/TEI/issues/327.</bibl>
-          <bibl>Bekiari, Chryssoula, George Bruseker, Martin Doerr, Christian-Emil Ore, Stephen Stead, et Athanasios Velios. 2021. « Definition of the CIDOC Conceptual Reference Model ». version 7.1.1. CIDOC CRM  Special Interest Group. http://www.cidoc-crm.org/version/version-7.1.1.</bibl>
-        <bibl>Burnard, Lou. 2013. « Resolving the Durand Conundrum ». Journal of the Text Encoding Initiative, no 6 (septembre). https://doi.org/10.4000/jtei.842.</bibl>
-          <bibl>———. 2020. « What Is TEI Conformance, and Why Should You Care? » Journal of the Text Encoding Initiative, no Issue 12 (mai). https://doi.org/10.4000/jtei.1777.</bibl>
-          <bibl>Carboni, Nicola. 2017. Documentation sémantique d’objets patrimoniaux à travers des représentations visuelles et iconographiques. https://hal.archives-ouvertes.fr/hal-01526781.</bibl>
-          <bibl>Carboni, Nicola, et Livio de Luca. 2017. « Towards a Semantic Documentation of Heritage Objects through Visual and Iconographical Representations ». International Information &amp; Library Review 49 (3): 207‑17. https://doi.org/10.1080/10572317.2017.1353374.</bibl>
-          <bibl>Ciotti, Fabio, et Francesca Tomasi. 2016. « Formal Ontologies, Linked Data, and TEI Semantics ». Journal of the Text Encoding Initiative, no 9 (septembre). https://doi.org/10.4000/jtei.1480.</bibl>
-          <bibl>Ciula, Arianna, et Øyvind Eide. 2014. « Reflections on cultural heritage and digital humanities: modelling in practice and theory ». In Proceedings of the First International Conference on Digital Access to Textual Cultural Heritage, 35‑41. DATeCH ’14. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/2595188.2595207.</bibl>
-          <bibl>Clavel, Thierry. 2019. « FRBR, RDA, BibFrame : comment prendre en compte ces nouveaux standards ? » In Réinformatiser une bibliothèque, édité par Anna Svenbro. La Boîte à outils. Villeurbanne: Presses de l’enssib. http://books.openedition.org/pressesenssib/6742.</bibl>
-          <bibl>« DOnnées Patrimoniales HEritage DAta ». 2020. Répertoire canadien d’information sur le patrimoine. https://chin-rcip.github.io/collections-model/.</bibl>
-          <bibl>Driscoll, M J. 2006. « XML Markup of Biographical and Prosopographical Data ». In TEI Day in Kyoto 2006, 75‑83. Kyoto Institute for Research in Humanities: Kyoto University. http://coe21.zinbun.kyoto-u.ac.jp/tei-day/TEIDayKyoto2006.pdf.</bibl>
-          <bibl>Eide, Øyvind. 2014. « Ontologies, Data Modeling, and TEI ». Journal of the Text Encoding Initiative, no 8 (décembre). https://doi.org/10.4000/jtei.1191.</bibl>
-          <bibl>Guillem, Anais, George Bruseker, et Paola Ronzino. 2017. « Process, Concept or Thing? Some Initial Considerations in the Ontological Modelling of Architecture ». International Journal on Digital Libraries 18 (4): 289‑99. https://doi.org/10.1007/s00799-016-0188-0.</bibl>
-          <bibl>Heath, Tom, et Christian Bizer. 2011a. Linked Data: Evolving the Web into a Global Data Space. 1. ed. Synthesis Lectures on the Semantic Web: Theory and Technology 1. San Rafael, Calif.: Morgan &amp; Claypool.</bibl>
-          <bibl>———. 2011b. « Linked Data: Evolving the Web into a Global Data Space ». Synthesis Lectures on the Semantic Web: Theory and Technology 1 (1): 1‑136. https://doi.org/10.2200/S00334ED1V01Y201102WBE001.</bibl>
-          <bibl>Jones, Ed, et Michele Seikel, éd. 2016. Linked data for cultural heritage. An ALCTS monograph. Chicago: ALA Editions, an imprint of the American Library Association.</bibl>
-          <bibl>« Linked Art ». s. d. Consulté le 2 avril 2020. https://linked.art/.</bibl>
-          <bibl>Newbury, David. s. d. « LOUD: Linked Open Usable Data and Linked.Art », 11.</bibl>
-          <bibl>Ore, Christian-Emil, et Øyvind Eide. 2009. « TEI and cultural heritage ontologies: Exchange of information? » Literary and Linguistic Computing 24 (2): 161‑72. https://doi.org/10.1093/llc/fqp010.</bibl>
-          <bibl>Øyvind, Eide. 2019. « Ontologies and Data Modeling ». In Shape of Data in Digital Humanities: Modeling Texts and Text-Based Resources., édité par Julia Flanders et Fotis Jannidis. Routledge.</bibl>
-          <bibl>Raybuck, Suzanne Michelle, et Sarah C. Stanley. 2019. « An Exploration of &lt;object&gt; using Antarctic Artifacts ». In . https://gams.uni-graz.at/o:tei2019.113.</bibl>
-            <bibl>« Swiss Art Research Infrastructure (SARI) ». s. d. Consulté le 4 mars 2021. https://swissartresearch.net/.</bibl>
-            <bibl>TEI Consortium. 2021. « Guidelines for Electronic Text Encoding and Interchange, P5 ». 2021. https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html.</bibl>
-            <bibl>Wittern, Christian, Arianna Ciula, et Conal Tuohy. 2009. « The making of TEI P5 ». Literary and Linguistic Computing 24 (3): 281‑96. https://doi.org/10.1093/llc/fqp017.</bibl>
-            <bibl>Wood, David, Marsha Zaidman, Luke Ruth, et Michael Hausenblas. 2014. Linked data: structured data on the Web. Shelter Island, NY: Manning.</bibl>
-      </div>
+      
       <div>
         <head>The following documentation is provided as a guide. It must be translated and cleaned.</head>
         <head>Inventaire des éléments ajoutés ou modifiés</head>
