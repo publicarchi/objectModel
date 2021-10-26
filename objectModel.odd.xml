@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Object Content Model</title>
+        <title type="subtitle">Encoding Guidelines</title>
+        <author>Emmanuel Chateau-Dutier</author>
+        <author>Caroline Corbières</author>
+        <author>Sara Nadal</author>
+        <funder>Groupe de recherche sur les éditions critiques en contexte numérique (GREN)</funder>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Université de Montréal</publisher>
+        <date when="2021">2021</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Native digital document</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change />
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <div>
+        <head>Metadata</head>
+        <p>Date : 2021-07-01</p>
+        <p>Version : 0.1</p>
+        <p>Authors : Emmanuel Chateau-Dutier, Caroline Corbières, Sarah Nadal</p>
+        <p>Context : projet Ledoux, Labex les passés dans le présent <ref
+          target="http://www.ledoux-architecture.fr"><hi rend="underline color(1155cc)"
+          >http://www.ledoux-architecture.fr</hi></ref></p>
+        <p>Funder : Groupe de recherche sur les éditions critiques en contexte numérique (GREN) <ref
+          target="https://gren.openum.ca"><hi rend="underline color(1155cc)"
+          >https://gren.openum.ca</hi></ref></p>
+      </div>
+      <div>
+        <head>Introduction</head>
+        <p>As a model dedicated to the representation of text, the Text Encoding Initiative (TEI) is not primarily oriented toward the description of heritage objects. Nevertheless, in various contexts, publishers may have to deal with manuscripts or texts inscribed on media that have material and physical qualities. Moreover, TEI has often been used in art history in pioneering projects (Château-Dutier 2021). To help the description of cultural objects, the TEI Consortium recently introduced a new <gi>object</gi> element that had been called for for several years (Cojannot-Leblanc Chateau-Dutier 2015, TEIC/TEI Issue #327, Raybuck and Stanley 2019). Its content model is inspired by that of the <gi>msDesc</gi> element. While it proves to be very rich and appropriate for the description of manuscripts and their material characteristics (support, binding, scripts, illumination and ornamentation, quire assembly, etc.) this model lacks the genericity to cover all the common needs of art historians. However, some digital publishing projects may need to document works in the same way as they deal with people, organizations or places, using the entities defined in the TEI namesdates module.</p>
+      </div>
+      <div>
+        <head>Project context</head>
+        <p>The work we present was carried out as part of the project to publish <title>L’Architecture considérée sous le rapport de l’Art des mœurs et de la législation</title> by Claude-Nicolas Ledoux, which is the most famous and enigmatic work of all modern European architecture.  The illustration of the book is remarkable both for its ambition and the quality of its engraving. Of the five volumes announced in the prospectus, only the first was published in 1804. But Ledoux worked for thirty years on the illustration of the whole, as shown by an other volume published by the architect Ramée in 1847, and an important factitious collection of plates kept at the Paris’ Historial Libray (BHVP), as well as various isolated plates that have often remained unpublished.</p>
+        <p>Although the fame of this book has justified several reprints, Ledoux’s Architecture has never yet been the subject of a true scientific edition. Moreover, the entirety of his editorial project could not be studied due to the lack of a systematic collection and analysis of all the plates (nearly 500) and several manuscripts related to the preparation of the project (prospectus, drafts for development, correspondence). We proposed to undertake a digital critical edition intended to explain the different levels of reading of the 1804 text, by associating the literary approach with the history of political and artistic ideas of the 18<hi
+          rend="superscript"
+          >th</hi> century. In order to account for the new dialectic introduced by Ledoux between text and image, we engage a systematic inventory of the iconographic material that involves the identification of preparatory drawings and engravings in public and private collections, and an in-depth study of the different states of the plates in order to refine the chronology of the preparation of the work. Therefore the aim is to restore Ledoux’s unfinished work and all his moral and didactic ideas on the role of architecture both in the society of the Ancien Régime and in the new Republic.</p>
+        <p>The project presents significant challenges in describing engravings since it involves reporting on complex editorial phenomena and documenting states while relating them to the architect's projected Work. In its current state, the content model of the <gi>object</gi> element does not allow for dealing with either engravings or buildings, whose description can be based on specialized documentary models in art history and bibliography. Two ontologies, compatible with each other, dominate these two domains. On the one hand, the CIDOC conceptual reference model for museum objects (CIDOC-CRM), and on the other hand, the Fonctional Requirements for Bibliographic Records (FRBR) and the Library Reference Model (LRM), whose object-oriented versions allow the use with CIDOC-CRM.</p>
+        <p>Several XML formats implement these abstract models, such as LIDO for the exchange of museum records, and RDA for bibliographic description. If LIDO covered well the documentary needs for the description of engravings, it required the development of internal rules to fill in the records. Above all, it is an exchange format rather than an edition format. In the case of RDA, the format is not open and its declination in the French domain in new generation Intermarc for the description of engravings has not been completed yet. In any case, since the project consists in proposing an edition of Ledoux’s work, for us it seemed more appropriate not to separate the description of the engravings from the edition of the text. The image occupies an essential place in the author's editorial project. This is why we chose to work on an extension of the content model of the <gi>object</gi> element so that the TEI could be better put to use in art history.</p>
+      </div>
+      <div>
+        <head>Development principles</head>
+        <p>Since the developments introduced by the Proposal 5 of the Text encoding initiative, researchers in historical disciplines have several elements to describe entities such as persons, places or groups in detail (Driscoll 2006, Wittern, Ciula and Tuohy 2009). These additions allow TEI to be used for prosopographical or onomastic work either as part of reverse engineering of specialized works or for the preparation of directories and indexes that are linked to editions.</p>
+        <p>The content model of these historical entities is intended to receive a set of statements or assertions that belong to three conceptual groups: features, states and events among which are classified the sub-elements. It is a particularly rich and expressive abstract model to support historical information. Conceptually, the model is compatible with the CIDOC-CRM ontology which is an event-oriented ontology as shown by the work of the GIS ontology<!-- @todo refs -->.</p>
+        <p>The customization we propose tries as much as possible to reuse the structures already adopted for the content models of people, places or organizations to extend that of the <gi>object</gi> element. There was no reason for the new element not to have the three generic <gi>state</gi>, <gi>event</gi> and <gi>trait</gi> elements available for the other entities. Also, when new elements were created, they followed patterns comparable to those generally adopted in TEI for their naming, organization in the class system, or content model. Similarly, the new elements inherit the generic classes defined by TEI for attributes.</p>
+        <p>In order to ensure the compatibility of the new content model of the <gi>object</gi> element with CIDOC-CRM, the modeling choices we made were guided by prior modeling with this ontology drawing inspiration from application models such as LinkedArt. This work, led us to identify several ad hoc enhancements to the sub-elements available in <gi>person</gi>, <gi>place</gi> and <gi>org</gi> to better support, for example, the description of events.</p>
+      </div>
+      <div>
+        <head>Changes and new features</head>
+        <p>Here is the presentation of the main changes introduced for the object element, some of which may inspire adaptations for the other historical entities (person, places, org, msDesc).</p>
+        <div>
+          <head />
+          <p>In the field of art history and cultural heritage, the description of artifacts cannot always be based on a name or title. Rather, some cultural artifacts belong to series or sets that are catalogued by the use of categories. From then on, <gi>objectName</gi> sub-elements forged on the same model as <gi>placeName</gi>, <gi>persName</gi> and <gi>orgName</gi> are not sufficient to account for an object. The new <gi>objectIdentifier</gi> element introduced at the time of the creation of the <gi>object</gi> element does not completely resolve the issue because it only provides location and identification hints as is currently done in the TEI for manuscript descriptions within <gi>msDesc</gi>.</p>
+          <p>Therefore we thought it was appropriate to introduce a new element to group classification information that follows the practices adopted in museums with LIDO or LinkedArt. LIDO distinguishes the category of an object from its classification, however this distinction is not obvious. In LinkedArt, a two-level description is used to specify the nomenclature by using a type and a classification. After initially considering a new <gi>objectClassification</gi> element that could have contained <gi>classification</gi> and <gi>category</gi> sub-elements, we finally opted to use a generic <gi>classification</gi> element containing <gi>category</gi> sub-elements as this structure can also be useful for describing people, places and organizations. The <gi>category</gi> sub-elements can be typed as needed to replicate the two-level typing used by LinkedArt.
+            </p>
+        </div>
+        <div>
+          <head>Technics and medium</head>
+          <p>In its current version, the content model of <gi>object</gi> allows for the description of binding, support, or even writing, but in the context of describing cultural objects, these content models are not entirely suitable for describing architectural objects or works of art. We found the introduction of a new <gi>mediumDesc</gi> element to be a useful addition to the <gi>object</gi> content model. This element designed along the lines of <gi>physDesc</gi>, <gi>bindDesc</gi> or <gi>supportDesc</gi>, can alternatively contain a free description or a structured description with a new <gi>medium</gi> sub-element that is repeatable and can be linked to vocabularies.</p>
+          <p>Events lie at the core of the CIDOC-CRM model which considers the life of cultural objects. An artifact can be affected by various events that lead to its manufacture, transformation or restoration, or even its destruction or removal. Also, it seemed possible to us to make the content model of the <gi>event</gi> element much more consistent with CIDOC-CRM with some simple adjustments. In the CIDOC-CRM ontology, events involve actors, places and temporal entities. To follow this model, we created a <gi>participant</gi> sub-element to group actors with a <gi>role</gi>, and made the <gi>placeName</gi> and <gi>date</gi> elements available. These additions do not change the usual use of the element but allow for a more historically expressive use.</p>
+        </div>
+        <div>
+          <head>Events and relations</head>
+          <p>Events lie at the core of the CIDOC-CRM model which considers the life of cultural objects. An artifact can be affected by various events that lead to its manufacture, transformation or restoration, or even its destruction or removal. Also, it seemed possible to us to make the content model of the <gi>event</gi> element much more consistent with CIDOC-CRM with some simple adjustments. In the CIDOC-CRM ontology, events involve actors, places and temporal entities. To follow this model, we created a <gi>participant</gi> sub-element to group actors with a <gi>role</gi>, and made the <gi>placeName</gi> and <gi>date</gi> elements available. These additions do not change the usual use of the element but allow for a more historically expressive use.</p>
+          <p>The <gi>relation</gi> element was originally considered in the TEI abstract model as a state. It is probably in order to facilitate file maintenance that relationships and relationship lists are no longer available in the content models of the people, places, and organization entities. This choice is partly because a relationship can involve multiple entities. However, in some cases, it may be useful for the organization of the data entry work to fill in the relationships starting from a specific entity. There is no reason for TEI to impose this choice on the editor. From an abstract point of view, the relationship can be considered as a state.</p>
+        </div>
+      </div>
+      <div>
+        <p>The choices made for the extension of the <gi>object</gi> element content model we propose were directly informed by modeling with CIDOC-CRM. As this conceptual reference model can be used in different ways to model certain events, we chose to base our choices on two recent uses in the field of art history and heritage (LinkedArt and SARI). Thus, it was easily possible to propose a mapping of the new object element to CIDOC-CRM as well as a conversion to RDF in XQuery.</p>
+        <p>In order to simplify the conversion to RDF, we suggest the use of an attribute set inspired by the examples mentioned in the Guidelines for the description of relations or the use of CIDOC-CRM in the documentation of elements to refer to vocabularies or ontologies (https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-relation.html, https://tei-c.org/release/doc/tei-p5-doc/es/html/TD.html). Our use differs by the use of the @key attribute for the entity name.</p>
+      </div>
+      <div>
+        <head>Conclusion</head>
+        <p>As you will have understood, we have favored a simple customization that generally respects the content model of the TEI historical entities while preserving the backward compatibility of the model. All these proposals have been specified in ODD and documented online. Conversion scripts to CIDOC-CRM have been written in XQuery. From our point of view, this customization of the TEI seems to better serve the needs of the TEI for art history but could also benefit more widely the content models intended for the description of manuscripts. After all, inscribed texts are indeed cultural artifacts, and the possibilities currently offered by the TEI remain too limited for the description of illuminations in particular. We therefore invite the community to reflect on the object content model in connection with work on manuscript description.</p>
+      </div>
+    </front>
+    <body>
+      <div>
+        <head>Encoding Structure Presentation</head>
+        <div>
+          <head>The Object Structure (<gi>object</gi>)</head>
+          <p>The <gi>object</gi> element contains a description of a physical or conceptual
+                  object. Several objects can be grouped in <gi>listObject</gi> in order to classify
+                  them.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples"> <listObject type="prints">
+            <head>Prints</head> <object>Print 1</object> <object>Print 2</object> </listObject> </egXML>
+          <p>It contains the following sections : <specList>
+            <specDesc key="objectIdentifier" />
+            <specDesc key="objectClassification" />
+            <specDesc key="physDesc" />
+            <specDesc key="location" />
+            <specDesc key="history" />
+            <specDesc key="additional" />
+            <specDesc key="note" />
+            <specDesc key="listEvent" />
+            <specDesc key="listRelation" />
+            </specList></p>
+          <div>
+            <head>The object identifier (<gi>objectIdentifier</gi>)</head>
+            <p>The <gi>objectIdentifier</gi> element groups one or more informations to
+                     identify the object described, like its name or title, its identifiers and
+                     informations about its repository.</p>
+            <p>The name or the title of the object is encoded in the <gi>objectName</gi> tag
+                     and an identifier in the <gi>idno</gi> tag. If you wanted to fulfill
+                     informations about its repository, you can used the <gi>institution</gi>,
+                        <gi>repository</gi> and <gi>collection</gi> tags to identify it, and
+                     geographical tags like <gi>country</gi>, <gi>region</gi>, <gi>settlement</gi>
+                     or <gi>address</gi> to locate it.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <objectIdentifier>
+              <objectName>Plan du Rez-de-Chaussée de la maison de Madame de Thelusson, rue
+                           de Provence</objectName> <idno>FolRes169-pl051</idno>
+              <institution>Institut national d'histoire de l'art</institution>
+              <repository>Bibliothèque de l'INHA</repository> <country>France</country>
+              <settlement>Paris</settlement> </objectIdentifier> </egXML>
+          </div>
+          <div>
+            <head>The object classification (<gi>objectClassification</gi>)</head>
+            <p>The new <gi>objectClassification</gi> element groups one or more
+                     classifications and typologies describing an object. It is repeatable in order
+                     to specify several levels of classification, the first one being general and
+                     the followings more specifics. It has two child elements : <specList>
+              <specDesc key="classification" />
+              <specDesc key="category" />
+              </specList></p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <objectClassification> <category
+              key="E22-human-made-object"
+              ref="http://www.cidoc-crm.org/Entity/e22-man-made-object/version-6.2.2"
+              ><desc>Human-Made Object</desc></category> <classification
+              key="paintings(visual-works)" ref="http://vocab.getty.edu/aat/300033618"
+              >Painting</classification> </objectClassification> </egXML>
+            <div>
+              <head>Category (<gi>category</gi>)</head>
+              <p>The <gi>category</gi> element indicates the broad category the object
+                        described belongs to. We recommend to use controlled vocabularies or
+                        thesaurus : you can fill its name in the <att>key</att> attribute and its
+                        URI in the <att>ref</att> attribute.</p>
+            </div>
+            <div>
+              <head>Classification (<gi>classification</gi>)</head>
+              <p>The new <gi>classification</gi> element identifies the classification that
+                        groups similar objects together on the basis of defined characteristics. In
+                        the same way we described the <gi>category</gi>element, we recommend to use
+                        controlled vocabularies or thesaurus : you can fill its name in the
+                           <att>key</att> attribute and its URI in the <att>ref</att> attribute.</p>
+            </div>
+          </div>
+          <div>
+            <head>The physical description (<gi>physDesc</gi>)</head>
+            <p>The <gi>physDesc</gi> element has a child <gi>objectDesc</gi> element that
+                     contains a physical description of the object. It can have three child elements :<specList>
+              <specDesc key="mediumDesc" />
+              <specDesc key="supportDesc" />
+              <specDesc key="layoutDesc" />
+              </specList></p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <physDesc> <objectDesc> <mediumDesc>
+              <medium key="copper-engraving(printing-process)"
+              ref="http://vocab.getty.edu/aat/300190531">gravure sur
+                                 cuivre</medium> </mediumDesc> <supportDesc> <support>
+              <material>papier</material>
+              <stamp>estampille de la collection Bibliothèque Historique de la
+                                    Ville de Paris</stamp> </support> <extent>
+              <dimensions type="sheet" unit="cm"> <height>42</height> <width>59</width>
+              </dimensions> <dimensions type="plate" unit="cm"> <height>25</height>
+              <width>41,5</width> </dimensions> </extent> </supportDesc> <layoutDesc> <layout>
+              <desc>La planche a été découpée à la cuvette et collée au sein de
+                                    l’album</desc> </layout> </layoutDesc>
+              </objectDesc> </physDesc> </egXML>
+            <div>
+              <head>The medium description (mediumDesc)</head>
+              <p>The new <gi>mediumDesc</gi> element describes the techniques used for the
+                        object in the new <gi>medium</gi> element. We recommend to use controlled
+                        vocabularies or thesaurus : you can fill its name in the <att>key</att>
+                        attribute and its URI in the <att>ref</att> attribute. Moreover, you can
+                        specify if the technique described is main or subsequent in the
+                           <att>type</att> attribute.</p>
+            </div>
+            <div>
+              <head>The support description (supportDesc)</head>
+              <p>The <gi>supportDesc</gi> describes the support (<gi>support</gi>) of the
+                        object and its dimensions (<gi>extend</gi>). In the case of paper object,
+                        you can specify if there is a stamp or a watermark in the elements of the
+                        same name. For the <gi>dimension</gi> element, we recommend to indicate the
+                        unit of measurement in the <att>unit</att> attribute.</p>
+            </div>
+            <div>
+              <head>The layout description (layoutDesc)</head>
+              <p>The <gi>layoutDesc</gi> element groups any information about the object
+                        layout, encoded in the <gi>desc</gi> element.</p>
+            </div>
+          </div>
+          <div>
+            <head>The object location (<gi>location</gi>)</head>
+            <p>The <gi>location</gi> element defines the location of a property object. It has
+                     as child elements geographical tags like <gi>country</gi>, <gi>region</gi>,
+                        <gi>settlement</gi> or <gi>address</gi>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <location>
+              <settlement>Paris</settlement> <country>France</country> <address>
+              <street>30 rue de Provence</street> </address> </location> </egXML>
+          </div>
+          <div>
+            <head>Historical informations about the object (<gi>history</gi>)</head>
+            <p>The <gi>history</gi> element describes the history of an object through
+                     informations about its acquisition (<gi>acquisition</gi>), provenance
+                        (<gi>provenance</gi> and origin (<gi>origin</gi>).</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <history>
+              <acquisition><p>Legs fait au musée du Louvre en 1947</p></acquisition>
+              <provenance><p>Collection de Lucien et Agathe Laveissière ; legs fait au
+                              musée du Louvre en 1947 (comité d'avril et conseil de décembre 1947)
+                              par leur neveu Jacques Lenté (1890-1967), en leur souvenir et en
+                              respect du legs fait par voie testamentaire le 28 novembre 1946 par
+                              Agathe Laveissière, née Delahalle (1870-1946).</p></provenance>
+              </history> </egXML>
+          </div>
+          <div>
+            <head>Additional sources (<gi>additional</gi>)</head>
+            <p>The <gi>additional</gi> element groups additional information like
+                     bibliographic sources, listed in the <gi>listBibl</gi> element, surrogate
+                     copies (<gi>surrogate</gi>), including its digitised version, and any
+                     administrative or curatorial information (<gi>adminInfo</gi>).</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <additional> <surrogates> <ref
+              facs="https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000893999/v0094.simple.selectedTab=thumbnail"
+               /> </surrogates> <listBibl> <bibl /> </listBibl> </additional> </egXML>
+          </div>
+          <div>
+            <head>Notes (<gi>note</gi>)</head>
+            <p>The <gi>note</gi> element contains a note about any additional information
+                     about the object described.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <!-- A COMPLETER --> </egXML>
+          </div>
+          <div>
+            <head>The list of events related to the object (<gi>listEvent</gi>)</head>
+            <p>The <gi>listEvent</gi> element contains a list of event linked to an object. To
+                     specify the nature of each <gi>event</gi>, we recommend to use controlled
+                     vocabularies or thesaurus : you can fill its name in the <att>key</att>
+                     attribute and its URI in the <att>ref</att> attribute. You can describe more
+                     precisely an <gi>event</gi> with the following tags : <list>
+              <item>The <gi>date</gi>element to indicate the date of the event.</item>
+              <item>The <gi>placeName</gi> or <gi>location</gi> element to precise its
+                           location.</item>
+              <item>The new <gi>participant</gi> element, which includes a
+                              <gi>persName</gi> or <gi>orgName</gi> and a <gi>role</gi>tags, to fill
+                           the name of the participant and its role.</item>
+              </list> </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <listEvent><event type="CRM"
+              key="E12-production" ref="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">
+              <date>1778</date> <participant> <persName
+              ref="http://www.cidoc-crm.org/Property/p14-carried-out-by/version-6.2"
+              key="P14-carried-out-by">Claude Nicolas Ledoux</persName> <role>Architecte</role>
+              </participant> <placeName>Paris</placeName> </event></listEvent> </egXML>
+          </div>
+          <div>
+            <head>The list of object relations (<gi>listRelation</gi>)</head>
+            <p>The <gi>listRelation</gi> element lists any relationships between the objects
+                     described. A relation (<gi>relation</gi>) could be described on the CIDOC-CRM
+                     model, following the semantic triple (RDF triple) logic composed of a subject,
+                     a predicate and an object. In order to compose a sentence, the subject is named
+                     in the <att>active</att> attribute, the predicate, which can refers to an
+                     ontology, is described in the <att>key</att> and <att>ref</att> attributes and
+                     the object is named in the <att>passive</att> attribute.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <listRelation> <relation type="LRM"
+              active="#w0001" key="R3-is-realised-in"
+              ref="http://www.cidoc-crm.org/Property/r3-is-realised-in" passive="#b0001" />
+              </listRelation> </egXML>
+          </div>
+        </div>
+      </div>
+      <div>
+        <head>Encoding Specifications</head>
+        <schemaSpec ident="objectModel" docLang="en" prefix="tei_" xml:lang="en">
+          <moduleRef key="core" except="" />
+          <moduleRef key="tei" except="" />
+          <moduleRef key="header" except="" />
+          <moduleRef key="textstructure" except="" />
+          <moduleRef key="namesdates" except="" />
+          <moduleRef key="analysis" except="" />
+          <moduleRef key="msdescription" except="" />
+          <moduleRef key="figures" except="" />
+          <moduleRef key="transcr" except="" />
+          <moduleRef key="drama" except="" />
+
+          <!-- New elements -->
+          <elementSpec ident="mediumDesc" module="msdescription">
+            <gloss xml:lang="en">medium description</gloss>
+            <desc xml:lang="en"
+              >contains a description of the materials of the object which is
+                     being described.</desc>
+            <classes>
+              <memberOf key="att.global" />
+              <memberOf key="model.objectPart" />
+            </classes>
+            <content>
+              <alternate minOccurs="1" maxOccurs="unbounded">
+                <elementRef key="medium" />
+                <classRef key="model.global" />
+                <classRef key="model.pLike" />
+              </alternate>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="medium" module="msdescription">
+            <gloss xml:lang="en">medium</gloss>
+            <desc xml:lang="en">describes the materials of the object.</desc>
+            <classes>
+              <memberOf key="att.global" />
+              <memberOf key="att.canonical" />
+              <memberOf key="att.typed" />
+            </classes>
+            <content>
+              <alternate minOccurs="1" maxOccurs="unbounded">
+                <textNode />
+                <classRef key="model.global" />
+                <classRef key="model.pLike" />
+              </alternate>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="participant" module="namesdates">
+            <gloss xml:lang="en">participant</gloss>
+            <desc xml:lang="en">provides information about participants of an event.</desc>
+            <classes>
+              <memberOf key="att.global" />
+              <memberOf key="att.canonical" />
+              <memberOf key="att.typed" />
+              <memberOf key="model.persStateLike" />
+            </classes>
+            <content>
+              <alternate minOccurs="1" maxOccurs="unbounded">
+                <textNode />
+                <classRef key="model.nameLike.agent" />
+                <classRef key="model.global" />
+                <classRef key="model.pLike" />
+                <elementRef key="role" />
+              </alternate>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="objectClassification" module="namesdates">
+            <gloss xml:lang="en">object classification</gloss>
+            <desc xml:lang="en"
+              >groups one or more classifications or categories concerning an
+                     object.</desc>
+            <classes>
+              <memberOf key="att.global" />
+              <memberOf key="att.typed" />
+              <memberOf key="model.biblPart" />
+              <memberOf key="model.objectPart" />
+            </classes>
+            <content>
+              <alternate minOccurs="1" maxOccurs="unbounded">
+                <elementRef key="category" />
+                <elementRef key="classification" />
+                <classRef key="model.global" />
+                <classRef key="model.pLike" />
+              </alternate>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="classification" module="namesdates">
+            <gloss xml:lang="en">classification</gloss>
+            <desc xml:lang="en">contains an individual descriptive classification.</desc>
+            <classes>
+              <memberOf key="att.global" />
+              <memberOf key="att.canonical" />
+              <memberOf key="att.typed" />
+              <memberOf key="model.objectLike" />
+            </classes>
+            <content>
+              <alternate minOccurs="1" maxOccurs="unbounded">
+                <textNode />
+                <classRef key="model.global" />
+                <classRef key="model.pLike" />
+              </alternate>
+            </content>
+          </elementSpec>
+
+          <classSpec type="model" ident="model.objectPart" module="msdescription">
+            <desc xml:lang="en">groups elements which form part of the description of an
+                     object.</desc>
+          </classSpec>
+
+          <!-- Modify elements -->
+          <elementSpec ident="listRelation" mode="change">
+            <classes mode="change">
+              <memberOf key="model.orgPart" />
+              <memberOf key="model.personPart" />
+              <memberOf key="model.placeLike" />
+              <memberOf key="model.objectPart" />
+            </classes>
+          </elementSpec>
+
+          <elementSpec ident="listEvent" mode="change">
+            <classes mode="change">
+              <memberOf key="model.placeLike" />
+              <memberOf key="model.objectPart" />
+            </classes>
+          </elementSpec>
+
+          <elementSpec ident="event" mode="change">
+            <content>
+              <sequence>
+                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
+                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded" />
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                  <classRef key="model.dateLike" />
+                  <elementRef key="participant" />
+                  <classRef key="model.nameLike.agent" />
+                  <classRef key="model.placeStateLike" />
+                  <classRef key="model.pLike" />
+                  <classRef key="model.labelLike" />
+                </alternate>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                  <classRef key="model.noteLike" />
+                  <classRef key="model.biblLike" />
+                  <elementRef key="linkGrp" />
+                  <elementRef key="link" />
+                  <elementRef key="idno" />
+                  <elementRef key="ptr" />
+                </alternate>
+                <elementRef key="event" minOccurs="0" maxOccurs="unbounded" />
+              </sequence>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="object" mode="change">
+            <classes mode="change">
+              <memberOf key="model.objectPart" />
+            </classes>
+            <content>
+              <sequence>
+                <elementRef key="objectIdentifier" minOccurs="1" maxOccurs="unbounded" />
+                <elementRef key="objectClassification" minOccurs="0" maxOccurs="unbounded" />
+                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded" />
+                <alternate>
+                  <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded" />
+                  <sequence>
+                    <elementRef key="msContents" minOccurs="0" />
+                    <elementRef key="physDesc" minOccurs="0" />
+                    <elementRef key="location" minOccurs="0" />
+                    <elementRef key="history" minOccurs="0" />
+                    <elementRef key="additional" minOccurs="0" />
+                  </sequence>
+                </alternate>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                  <classRef key="model.noteLike" />
+                  <classRef key="model.biblLike" />
+                  <elementRef key="linkGrp" />
+                  <elementRef key="link" />
+                </alternate>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                  <classRef key="model.listLike" />
+                </alternate>
+                <elementRef key="object" minOccurs="0" maxOccurs="unbounded" />
+              </sequence>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="objectDesc" mode="change">
+            <classes mode="change">
+              <memberOf key="model.objectPart" />
+            </classes>
+            <content>
+              <alternate>
+                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded" />
+                <sequence>
+                  <elementRef key="mediumDesc" minOccurs="0" />
+                  <elementRef key="supportDesc" minOccurs="0" />
+                  <elementRef key="layoutDesc" minOccurs="0" />
+                </sequence>
+              </alternate>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="role" mode="change">
+            <classes mode="change">
+              <memberOf key="att.canonical" />
+              <memberOf key="att.typed" />
+              <memberOf key="model.persStateLike" />
+            </classes>
+          </elementSpec>
+
+          <elementSpec ident="category" mode="change">
+            <classes mode="change">
+              <memberOf key="att.canonical" />
+              <memberOf key="att.typed" />
+            </classes>
+          </elementSpec>
+        </schemaSpec>
+      </div>
+    </body>
+    <back>
+      <div>
+        <head>The following documentation is provided as a guide. It must be translated and cleaned.</head>
+        <head>Inventaire des éléments ajoutés ou modifiés</head>
+        <p><hi rend="italic bold">objectClassification</hi> cf. LinkedArt</p>
+        <p><hi rend="italic bold">category</hi> ajouté à <hi rend="italic bold"
+          >objectClassification</hi></p>
+        <p><hi rend="italic bold">classification</hi> ajouté à <hi rend="italic bold"
+          >objectClassification</hi></p>
+        <p><hi rend="italic bold">@key</hi> et <hi rend="italic bold"
+          >@ref</hi> rendus disponibles sur <hi rend="italic bold"
+          >category</hi> et <hi rend="italic bold" xml:space="preserve">medium </hi></p>
+        <p><hi rend="italic bold">mediumDesc</hi> dans <hi rend="italic bold">objectDesc</hi></p>
+        <p><hi rend="italic bold">medium</hi> dans <hi rend="italic bold">mediumDesc</hi></p>
+        <p><hi rend="italic bold">listRelation</hi> ajouté dans <hi rend="italic bold"
+          >object</hi>, <hi rend="italic bold">place</hi>, <hi rend="italic bold">person</hi>, <hi
+          rend="italic bold">org, persona, personGrp, occupation</hi></p>
+        <p><hi rend="italic bold">listEvent</hi> ajouté dans <hi rend="italic bold">object</hi></p>
+        <p><hi rend="italic bold">state</hi> ajouté dans <hi rend="italic bold">object</hi></p>
+        <p><hi rend="italic bold">trait</hi> ajouté dans <hi rend="italic bold">object</hi></p>
+        <p><hi rend="italic bold">event</hi> ajouté dans <hi rend="italic bold">object</hi></p>
+        <p><hi rend="italic bold">location</hi> ajouté dans <hi rend="italic bold">object</hi></p>
+        <p>regarder les autres structures qui sont habituellement disponibles dans <hi
+          rend="italic bold">place</hi> et <hi rend="italic bold"
+          >person</hi> et qui devraient être reproduites dans <hi rend="italic bold">object</hi></p>
+        <p>Modification du modèle de contenu de <hi rend="italic bold">event</hi> ajout de <hi
+          rend="italic bold">date</hi>, <hi rend="italic bold">persName</hi>, <hi rend="italic bold"
+          >orgName, placeName</hi>, <hi rend="italic bold">participant</hi></p>
+        <p><hi rend="italic bold"
+          >participant</hi> pour permettre la description d’événement avec un <hi rend="italic bold"
+          >role</hi></p>
+        <p><hi rend="italic bold">role</hi> dans <hi rend="italic bold">participant</hi></p>
+      </div>
+
+      <div>
+        <head>Proposition des classes auxquelles ajouter les éléments</head>
+        <p><hi rend="italic bold">objectClassification</hi> </p>
+        <p>Classification d’un objet culturel</p>
+        <p>→ élément inspiré du modèle de données de LinkedArt (basé sur CIDOC-CRM) qui propose de typer et classer les objets.<hi rend="italic bold" xml:space="preserve"> objectClassification</hi> permet de préciser la catégorie générale de l’objet ainsi que sa, ou ses, classifications. Ces données étant relatives à l’identification de l’objet, <hi
+          rend="italic bold">objectClassification</hi> peut être intégré à <hi rend="italic bold"
+          >model.biblPart</hi> (module tei) dont fait partie <hi rend="italic bold"
+          >objectIdentifier</hi>. Il pourrait également être pertinent d’intégrer <hi
+          rend="italic bold">objectClassication</hi> et <hi rend="italic bold"
+          >objectIdentifier</hi> à une nouvelle classe intitulée <hi rend="italic bold"
+          >model.objectPart</hi>. </p>
+        <p>→ contiendrait les deux sous-éléments répétables <hi rend="italic bold"
+          >category</hi> et <hi rend="italic bold">classification</hi>. </p>
+        <p>→ se distingue de <hi rend="italic bold"
+          >classDecl</hi> qui permet de lister une typologie ou une taxinomie. Ici, l’idée est de préciser la typologie de l’objet, en s’appuyant par exemple sur un vocabulaire ou thésaurus. </p>
+        <p><hi rend="italic bold">category</hi></p>
+        <p>→ pourrait être intégré à la classe <hi rend="italic bold"
+          >model.objectLike</hi> (module tei) afin de pouvoir être utilisé dans <hi
+          rend="italic bold"
+          >objectClassification</hi> et ne plus être uniquement dépendant de <hi rend="italic bold" xml:space="preserve">classDecl </hi>et <hi
+          rend="italic bold">taxinomy</hi>. </p>
+        <p>→ ajouter les classes d’attributs suivantes : <hi rend="italic bold"
+          >att.canonical</hi> (<hi rend="italic bold">@key</hi> et <hi rend="italic bold"
+          >@ref</hi>), <hi rend="italic bold">att.typed</hi></p>
+        <p><hi rend="italic bold">classification</hi></p>
+        <p>→ ce nouvel élément, inspiré de LinkedArt, permettrait de renseigner la classification de l’objet. Tout comme <hi
+          rend="italic bold"
+          >category</hi>, il pourrait être intégré à <hi rend="italic bold" xml:space="preserve">model.objectLike </hi>(module tei).  </p>
+        <p>→ ajouter ajouter les classes d’attributs générales : <hi rend="italic bold"
+          >att.global</hi>, <hi rend="italic bold">att.global.rendition</hi>, <hi rend="italic bold"
+          >att.global.linking</hi>, <hi rend="italic bold">att.global.analytic</hi>, <hi
+          rend="italic bold">att.global.facs</hi>, <hi rend="italic bold"
+          >att.global.change</hi>, <hi rend="italic bold">att.global.responsability</hi>, <hi
+          rend="italic bold">att.global.source</hi>, et les classes suivantes : <hi
+          rend="italic bold">att.canonical</hi> (<hi rend="italic bold">@key</hi> et <hi
+          rend="italic bold">@ref</hi>), <hi rend="italic bold">att.typed</hi></p>
+        <p><hi rend="italic bold">mediumDesc</hi> </p>
+        <p>→ élément qui permettrait de décrire la ou les techniques de l’objet, au niveau d’<hi
+          rend="italic bold"
+          >objectDesc</hi> où est renseignée la description matérielle de l’objet.  <hi
+          rend="italic bold">objectDesc</hi> faisant partie de la classe <hi rend="italic bold"
+          >model.physDescPart</hi>, <hi rend="italic bold"
+          >mediumDesc</hi> pourrait y être intégré. </p>
+        <p>	→ il comprendrait l’élément <hi rend="italic bold">medium</hi> qui serait répétable.</p>
+        <p><hi rend="italic bold">medium</hi></p>
+        <p>→ élément qui permettrait de préciser une technique de création d’un objet en s’appuyant par exemple sur un thésaurus ou un vocabulaire. Étant dépendant de <hi
+          rend="italic bold">mediumDesc</hi>, il ferait implicitement partie de la classe <hi
+          rend="italic bold">model.physDescPart</hi>. </p>
+        <p>→ ajouter ajouter les classes d’attributs générales : <hi rend="italic bold"
+          >att.global</hi>, <hi rend="italic bold">att.global.rendition</hi>, <hi rend="italic bold"
+          >att.global.linking</hi>, <hi rend="italic bold">att.global.analytic</hi>, <hi
+          rend="italic bold">att.global.facs</hi>, <hi rend="italic bold"
+          >att.global.change</hi>, <hi rend="italic bold">att.global.responsability</hi>, <hi
+          rend="italic bold">att.global.source</hi>, et les classes suivantes : <hi
+          rend="italic bold">att.canonical</hi> (<hi rend="italic bold">@key</hi> et <hi
+          rend="italic bold">@ref</hi>), <hi rend="italic bold">att.typed</hi></p>
+        <p><hi rend="italic bold">listRelation</hi></p>
+        <p>→ intégration de listRelation dans <hi rend="italic bold">object</hi>, <hi
+          rend="italic bold">place</hi>, <hi rend="italic bold"
+          >person</hi>, <hi rend="italic bold" xml:space="preserve">org, persona, personGrp, occupation </hi>sur le modèle de <hi
+          rend="italic bold">listEvent</hi>. </p>
+        <p><hi rend="italic bold">object</hi></p>
+        <p> → ajout de <hi rend="italic bold" xml:space="preserve">listEvent, state, trait </hi>et<hi rend="italic bold" xml:space="preserve"> event</hi> à <hi
+          rend="italic bold">object</hi> sur le modèle de <hi rend="italic bold"
+          >person</hi> ou <hi rend="italic bold" xml:space="preserve">place </hi>(éléments communs du module namesdates). </p>
+        <p><hi rend="italic bold">location</hi></p>
+        <p>→ ajout de <hi rend="italic bold">location</hi> dans <hi rend="italic bold"
+          >object</hi> permettrait de renseigner la localisation d’un objet immobilier. Il est déjà possible d’indiquer <hi
+          rend="italic bold">location</hi> dans <hi rend="italic bold"
+          >objectName</hi>, mais il serait plus pertinent de l’insérer à un autre niveau, comme c’est le cas pour <hi
+          rend="italic bold">place</hi> et <hi rend="italic bold"
+          >org</hi>. Cela pourrait être l’occasion d’également l’insérer dans <hi rend="italic bold"
+          >person</hi> (uniquement disponible dans <hi rend="italic bold">persName</hi>). </p>
+        <p><hi rend="italic bold">event</hi></p>
+        <p><hi rend="italic bold" xml:space="preserve">→ </hi>afin de décrire autrement un événement, sans passer par l’élément <hi
+          rend="italic bold"
+          >desc</hi>, nous proposons de déplacer certains éléments du module namesdates (présents dans <hi
+          rend="italic bold">desc</hi>) comme <anchor type="commentRangeStart" n="0" /><hi
+          rend="italic bold">date</hi>, <hi rend="italic bold">persName</hi>, <hi rend="italic bold"
+          >orgName, placeName, location</hi><anchor type="commentRangeEnd" n="0" /><note
+          place="comment" resp="#Caroline_Corbieres" n="0"><date when="2021-06-02T10:10:19Z" /><hi
+          rend="normalweight baseline" style="font-size:11pt"
+          >voir si on ajoute tous les éléments du module namesdates présents dans desc ? Il y a en beaucoup !</hi></note>, et d’introduire l’élément <hi
+          rend="italic bold">participant</hi> directement dans <hi rend="bold">event</hi>. </p>
+        <p><hi rend="italic bold">participant</hi> </p>
+        <p>→ élément qui permettrait de décrire les participants d’un événement. Il pourrait être ajouté à <hi
+          rend="italic bold"
+          >model.persStateLike</hi> (tei) qui permet de décrire les caractéristiques relatives aux personnes ayant une durée définie. </p>
+        <p>→ il contiendrait des éléments du module namesdates comme <hi rend="italic bold"
+          >persName</hi> et <hi rend="italic bold">orgName</hi> et l’élément <hi rend="italic bold"
+          >role</hi>. </p>
+        <p>→ ajouter ajouter les classes d’attributs générales : <hi rend="italic bold"
+          >att.global</hi>, <hi rend="italic bold">att.global.rendition</hi>, <hi rend="italic bold"
+          >att.global.linking</hi>, <hi rend="italic bold">att.global.analytic</hi>, <hi
+          rend="italic bold">att.global.facs</hi>, <hi rend="italic bold"
+          >att.global.change</hi>, <hi rend="italic bold">att.global.responsability</hi>, <hi
+          rend="italic bold">att.global.source</hi>, et les classes suivantes : <hi
+          rend="italic bold">att.canonical</hi> (<hi rend="italic bold">@key</hi> et <hi
+          rend="italic bold">@ref</hi>), <hi rend="italic bold">att.typed</hi></p>
+        <p><hi rend="italic bold">role</hi></p>
+        <p><hi rend="italic bold" xml:space="preserve">→ </hi>permettrait de renseigner le rôle du participant à un événement et d’y associer un thesaurus ou un vocabulaire. <hi
+          rend="italic bold">role</hi> pourrait être intégré à la classe <hi rend="italic bold"
+          >model.persStateLike</hi> afin de ne plus dépendre uniquement du module drama.</p>
+        <p>→ ajouter les classes d’attributs suivantes : <hi rend="italic bold"
+          >att.canonical</hi> (<hi rend="italic bold">@key</hi> et <hi rend="italic bold"
+          >@ref</hi>), <hi rend="italic bold">att.typed</hi></p>
+      </div>
+      <div>
+        <head><anchor xml:id="py5rm7w7ohws"
+           />Description de l’élément object et de ses sous-éléments</head>
+        <div>
+          <head>Object</head>
+          <p>L’élément <hi rend="italic bold"
+            >object</hi> permet de décrire des objets physiques, qui peuvent être regroupés au sein d’une liste (<hi
+            rend="italic bold"
+            >listObject</hi>). Les éléments qu’il contient étant inspirés du module <hi rend="bold"
+            >msdescription</hi>, utilisé pour décrire les manuscrits, nous avons fait le choix de modifier sa structure pour rendre possible la description d’objets patrimoniaux. </p>
+          <p>Dans le cadre du projet Ledoux, les objets seront regroupés dans des typologies suivant le modèle WEMI (Work, Expression, Manifestation, Item) de LRMoo. La liste work regroupera toutes les œuvres en tant qu’idées et permettra d’exprimer la création d’un projet architectural. Les manifestations physiques du projet seront regroupées dans des listes selon leur typologie (gravure, dessin, édifice, etc.). Enfin, les exemplaires gravés, correspondant aux items d’une plaque gravée, seront listés ensemble. De plus, chaque objet sera doté d’un <hi
+            rend="italic bold">@xml:id</hi> non signifiant. </p>
+          <p>Un <hi rend="italic bold">object</hi> peut contenir les éléments suivants : <hi
+            rend="italic bold"
+            >objectIdentifier, additional, objectClassification, physDesc, location, history, note, listEvent, listRelation</hi>, auxquels peuvent s’ajouter des éléments des modules core et linking. Ils permettent de l’identifier, d’indiquer une reproduction et des sources qui lui sont relatives, de le classer, de le décrire physiquement, de le localiser (dans le cas des objets immobiliers), d’en faire l’historique et d’y associer des événements et des relations. </p>
+          <div>
+            <head><anchor xml:id="uy6ctnku2w1w" />ObjectIdentifier</head>
+            <p>L’élément <hi rend="italic bold"
+              >objectIdentifier</hi> permet de renseigner le titre de l’objet (<hi
+              rend="italic bold">objectName</hi>), son ou ses identifiants (<hi rend="italic bold"
+              >idno</hi>), ainsi que son lieu de conservation (<hi rend="italic bold"
+              >institution, repository, collection</hi> et des éléments géographiques). </p>
+            <p>Pour le projet Ledoux, il est possible d’indiquer si le titre est forgé grâce à l’emploi de l’attribut <hi
+              rend="italic bold">@type=”forged”</hi> au niveau d’<hi rend="italic bold"
+              >objectName</hi>. </p>
+          </div>
+          <div>
+            <head>Additional</head>
+            <p>L’élément <hi rend="italic bold"
+              >additional</hi> permet d’associer à l’objet des sources bibliographiques (<hi
+              rend="italic bold">listBibl</hi>), ses reproductions (<hi rend="italic bold"
+              >surrogates</hi>) et toute information administrative ou relative à la conservation et à l’exposition de l’objet (<hi
+              rend="italic bold">adminInfo</hi>). </p>
+            <p>Dans le cadre du projet Ledoux, les numérisations des gravures et dessins seront renseignées dans la structure suivante : </p>
+            <p><hi style="font-size:10pt">&lt;additional&gt;</hi></p>
+            <p><hi style="font-size:10pt">&lt;surrogates&gt;</hi></p>
+            <p><hi style="font-size:10pt">&lt;ref facs="https://lienNumérisation.fr"/&gt;</hi></p>
+            <p><hi style="font-size:10pt">&lt;/surrogates&gt;</hi></p>
+            <p><hi style="font-size:10pt">&lt;/additional&gt;</hi></p>
+          </div>
+          <div>
+            <head>ObjectClassification</head>
+            <p>Le nouvel élément <hi rend="italic bold"
+              >objectClassification</hi> permet d’indiquer la classification (<hi rend="italic bold"
+              >classification</hi>) et la typologie (<hi rend="italic bold"
+              >typology</hi>) de l’objet décrit. Il est répétable afin de permettre une classification à différents niveaux, la première étant générale, les suivantes plus précises. </p>
+            <p>Les éléments <hi rend="italic bold">typology</hi> et <hi rend="italic bold"
+              >classification</hi> peuvent être associés à des vocabulaires ou thésaurus grâce à l’emploi des attributs <hi
+              rend="italic bold">@ref</hi> (uri de l’entité ou du vocabulaire) et <hi
+              rend="italic bold">@key</hi> (nom de l’entité ou du vocabulaire). </p>
+            <p>Pour le projet Ledoux, nous allons nous référer aux entités CIDOC-CRM, aux vocabulaires du Getty et au thésaurus de la désignation des œuvres architecturales du Ministère de la Culture. La catégorie générale des objets décrits devra correspondre à l’une des trois entités CIDOC-CRM suivantes : E22 Human-Made Object, E20 Biological Object ou E28 Conceptual Object. </p>
+          </div>
+          <div>
+            <head><anchor xml:id="cw47tls68g23" />PhysDesc</head>
+            <p>	L’élément <hi rend="italic bold"
+              >physDesc</hi> contient toutes les informations relatives à la description physique de l’objet, qui sont renseignées dans l’élément <hi
+              rend="italic bold"
+              >objectDesc</hi>. Sa description physique peut être précisée dans les trois éléments suivants : <hi
+              rend="italic bold">mediumDesc</hi> (nouveau), <hi rend="italic bold"
+              >supportDesc</hi> et <hi rend="italic bold">layoutDesc</hi>. </p>
+            <p><hi rend="italic bold"
+              >mediumDesc</hi> permet de décrire la ou les techniques de l’objet, chacune étant renseignée dans un élément <hi
+              rend="italic bold">medium</hi> pouvant être accompagné des attributs <hi
+              rend="italic bold">@ref</hi> et <hi rend="italic bold"
+              >@key</hi>, pour y associer un vocabulaire, et <hi rend="italic bold"
+              >@type</hi>, pour indiquer les techniques principales et secondaires lorsqu’il y en a plusieurs. </p>
+            <p><hi rend="italic bold">supportDesc</hi> permet de décrire le support de l’objet (<hi
+              rend="italic bold">support</hi>) et ses dimensions (<hi rend="italic bold"
+              >extent</hi>). Pour le projet Ledoux, nous renseignerons dans le cas des documents papiers la présence d’une estampille (<hi
+              rend="italic bold">stamp</hi>) ou d’un filigrane (<hi rend="italic bold"
+              >watermark</hi>) au niveau du support et dans le cas des gravures, nous indiquerons les dimensions de la feuille et de la plaque gravée (cuvette). </p>
+            <p><hi rend="italic bold"
+              >layoutDesc</hi> regroupe toutes les informations relatives à la mise en page de l’objet. </p>
+          </div>
+          <div>
+            <head><anchor xml:id="bwv7w9y4rmid" />History</head>
+            <p>	L’élément <hi rend="italic bold"
+              >history</hi> permet de décrire l’historique de l’objet en précisant les données relatives à son acquisition (<hi
+              rend="italic bold">acquisition</hi>), à sa provenance (<hi rend="italic bold"
+              >provenance</hi>) et à son origine (<hi rend="italic bold">origin</hi>). </p>
+          </div>
+          <div>
+            <head>Note</head>
+            <p>	L’élément <hi rend="italic bold"
+              >note</hi> permet d’indiquer toute information supplémentaire sur l’objet, n’étant pas décrite dans les éléments précédemment cités. </p>
+            <p>Dans le cas du projet Ledoux, les notes peuvent être typées (<hi rend="italic bold"
+              >@type</hi>) afin de les différencier lorsqu’il y en a plusieurs. </p>
+          </div>
+          <div>
+            <head><anchor xml:id="x9xqr17fmf8m" />ListEvent</head>
+            <p>	L’élément <hi rend="italic bold">listEvent</hi> permet de lister des événements (<hi
+              rend="italic bold">event</hi>) liés à l’objet. Chaque <hi rend="italic bold"
+              >event</hi> peut comprendre les attributs <hi rend="italic bold">@type</hi>, <hi
+              rend="italic bold">@key</hi> et <hi rend="italic bold"
+              >@ref</hi> pour préciser le type d’un événement grâce à une entité CIDOC-CRM par exemple. </p>
+            <p>L’événement peut être décrit plus précisément dans les éléments suivants : <hi
+              rend="italic bold">date</hi>, <hi rend="italic bold">placeName</hi>, <hi
+              rend="italic bold">location</hi>, <hi rend="italic bold">persName</hi>, <hi
+              rend="italic bold">orgName</hi>, <hi rend="italic bold"
+              >participant</hi> (nouveau) et <hi rend="italic bold"
+              >desc</hi>.  L’élément participant permet notamment de renseigner le nom du participant (<hi
+              rend="italic bold">persName</hi> ou <hi rend="italic bold"
+              >orgName</hi>) et son rôle (<hi rend="italic bold"
+              >role</hi>) et d’y associer des entités et vocabulaires grâce aux attributs <hi
+              rend="italic bold">@ref</hi> et <hi rend="italic bold">@key</hi>. </p>
+            <p>Dans le cadre du projet Ledoux, l’événement et le nom du participant seront associés à une entité CIDOC-CRM, et son rôle à un vocabulaire du Getty. </p>
+          </div>
+          <div>
+            <head><anchor xml:id="y9f5zmm0txxx" />ListRelation</head>
+            <p>	L’élément <hi rend="italic bold"
+              >listRelation</hi> permet de lister les éventuelles relations (<hi rend="italic bold"
+              >relation</hi>) entre les objets décrits. Il est possible de s’appuyer sur le modèle de CIDOC-CRM ou celui plus général du web sémantique suivant la logique sujet-prédicat-objet: le prédicat (pouvant être vu comme le verbe d’une phrase) correspondant à une propriété en CIDOC-CRM est renseigné dans les attributs <hi
+              rend="italic bold">@key</hi> et <hi rend="italic bold"
+              >@ref</hi>, le sujet est indiqué dans l’attribut <hi rend="italic bold"
+              >@active</hi> et l’objet dans l’attribut <hi rend="italic bold">@passive</hi>. </p>
+            <p>Pour le projet Ledoux, nous utiliserons les propriétés CIDOC-CRM et LRMoo. </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <head><anchor xml:id="eia7xkm7nbe5" /><anchor type="commentRangeStart" n="1"
+           />Application aux gravures de Ledoux<anchor type="commentRangeEnd" n="1" /><note
+          place="comment" resp="#Emmanuel_Chateau" n="1"><date when="2021-06-01T14:34:43Z" /><hi
+          rend="normalweight baseline" style="font-size:11pt"
+          >à revoir et mettre à jour avec les choix réalisés</hi></note></head>
+        <div>
+          <head>Article de A. Guillem, G. Bruseker et P. Ronzino</head>
+          <p>Ils différencient l’architecture en tant que travail intellectuel de l’architecture en tant que bâtiment (aussi de l’architecture en tant que discipline) :</p>
+          <list type="unordered">
+            <item>architecture en tant que <hi rend="bold"
+              >construction/réalisation</hi> (objet physique) : description des caractéristiques physiques/matérielles</item>
+            <item>architecture en tant qu’<hi rend="bold"
+              >idée</hi> (exprimée dans les plans, croquis…) : doit être mise en relation avec les expressions qui en découlent</item>
+            <item><hi rend="normalweight" xml:space="preserve">architecture en tant que </hi><hi rend="bold" xml:space="preserve">série d’événements/actions </hi><hi rend="normalweight" xml:space="preserve">(de sa conception intellectuelle à sa réalisation physique) : implique </hi>la prise en compte des différents acteurs du projet</item>
+          </list>
+          <p>Ils soulèvent le cas des architectures de papier, pour lesquelles il est possible de distinguer la phase de conception intellectuelle abstraite des réalisations physiques tels que plans, dessins, croquis… </p>
+          <p>→ proposent d’utiliser FRBR pour décrire les différentes phases du travail intellectuel et les différencier expressions physiques + CRMba (<hi
+            rend="italic">archeological buildings</hi>) </p>
+          <p>→ parallèle avec le théâtre, qui est également basé sur une série d’événements qui mènent à la création de diverses expressions de l’oeuvre (dans le cas de la modélisation FRBR)</p>
+        </div>
+        <div>
+          <head><anchor xml:id="vz8z9qgqk2gr" />Niveaux de description</head>
+        </div>
+      </div>
+      <div>
+        <head>Description des volumes reliés</head>
+        <p>La plupart des exemplaires connus des gravures nous sont parvenues reliées dans des recueils gravés soit à travers l’édition de 1804 ou celle de Ramée de 1847. Il existe par ailleurs un recueil factice conservé à l’INHA et des volumes réunis par l’auteur pour les offrir à des protecteurs.</p>
+        <p>→ Chaque recueil sera décrit dans le <hi rend="bold">teiHeader</hi> </p>
+        <p>Afin de faciliter le travail de description, il sera sans doute nécessaire de pouvoir décrire ces volumes planche à planche tout en les mettant en rapport avec les autres exemplaires identifiés par ailleurs.</p>
+        <p>La description des exemplaires peut utiliser l’élément <hi rend="bold"
+          >figure</hi> de la TEI en renvoyant aux objets décrits par ailleurs dans la base.</p>
+        <list type="unordered">
+          <item>Les gravures reliées forment-elles des exemplaires devant être décrit pour eux-mêmes en plus de la description de l’exemplaire</item>
+        </list>
+        <div>
+          <head><anchor xml:id="pf7nwojnnqw1" />Description des exemplaires (item)</head>
+          <p>→ Est-ce qu’on précise l’auteur, l’imprimeur, l’éditeur pour chaque gravure ? Ou cela est décrit au niveau du recueil ? </p>
+          <p>Pas vraiment dans notre cas, pour limiter les répétitions lorsque les volumes sont reliés, mais il faudrait que l’on puisse le faire car il existe des feuilles volantes.</p>
+          <div>
+            <head><anchor xml:id="d0nw3lz54y9k" />Identification de l’objet</head>
+            <p>→ Chaque planche sera identifiée par un @xml:id reprenant l’id de l’exemplaire suivi du numéro de la planche ?</p>
+            <p>En effet, vérification possible de l’unicité et établissement des liens. Néanmoins &lt;idno&gt; est utile dans le cas de pièces isolées qui disposent de cotes.</p>
+            <p>Indication du titre ou du titre forgé avec @type = forged</p>
+          </div>
+          <div>
+            <head><anchor xml:id="nfk6r6oaeg2o" />Description physique</head>
+            <p>Pour la gravure, il paraît assez logique d’utiliser les éléments déjà disponibles dans <hi
+              rend="bold">objectDesc </hi>: <hi rend="bold">layoutDesc</hi> et <hi rend="bold"
+              >supportDesc</hi>.</p>
+            <p>Au sein de <hi rend="bold"
+              >layoutDesc</hi> l’élément layout peut contenir une description et plusieurs dimensions pour renseigner la dimension au niveau de la plaque, de la page ou du support de l’album lorsqu’elle est encollée. → Plutôt réservé à la mise en page et non aux dimensions de l’estampe ? </p>
+            <p>→ Dans le <hi rend="bold"
+              >supportDesc</hi>, il est possible de décrire le papier sur lequel l’estampe a été imprimée, avec dans support des précisions sur le matériau, l’estampille et le filigrane, et dans extent les dimensions de l’estampe (ou feuille sur laquelle elle a été imprimée) et de la plaque ? Est-ce utile de préciser les dimensions de la page sur laquelle est collée l’estampe ?</p>
+            <p>Comme on décrira également les matrices, il est en effet sans doute plus adapté d’utiliser <hi
+              rend="bold">supportDesc</hi>. <hi rend="bold"
+              >layoutDesc</hi> pourra permettre de prendre en charge la description des assemblages de plaques.</p>
+            <p>Dans <hi rend="bold"
+              >layoutDesc</hi> il est possible de décrire les mises en page avec <hi rend="bold"
+              >layout</hi> mais tout est très centré sur l’écriture. → Ne faudrait-il pas pouvoir utiliser <hi
+              rend="bold">surface</hi> et <hi rend="bold">zone</hi></p>
+            <p>→ Ajouter description de la technique artistique</p>
+            <p>La description des techniques est appropriée dans le cadre de la description physique si tant est qu’on la traite au niveau des traits. Il faudra également réfléchir à la possibilité de la traiter avec des événements pour des cas plus génériques.</p>
+          </div>
+          <div>
+            <head><anchor xml:id="l5v3liduj8xz" />Description du sujet</head>
+            <p>Au niveau de l’exemplaire, il pourrait être plus pertinent de ne pas répéter l’information car on aura la description des objets ailleurs. → Si gravure décrite dans le texte, il peut être utile de faire un lien vers l’objet grâce à @ref=”#Id_Planche”. </p>
+            <p>La référence se fera plutôt du texte vers les projets que l’inverse. Il faudra s’appuyer sur la hiérarchie projets &gt; représentation. Cependant un mécanisme doit être prévu pour l’iconographie, la classification sujet.</p>
+            <p>→ Est-ce que le sujet de la gravure fera l’objet d’une description précise au niveau de la liste des figures ? </p>
+            <p>Oui. cf. LIDO et LinkedArt (à traiter après le travail de modélisation)</p>
+          </div>
+          <div>
+            <head>Liens vers les manifestations et autres items ? </head>
+            <p>Le modèle TEI prévoit actuellement l’insertion des relations au niveau des objets, lieux, personnes et organisations. Pour l’organisation du travail, il peut être utile de ramener les listes de relations au sein des entités décrites. </p>
+            <p>→ Faut-il prévoir une modification du modèle.</p>
+          </div>
+        </div>
+        <div>
+          <head>Description des manifestations</head>
+          <p>→ Comment intégrer les manifestations physiques ? Autre liste ? </p>
+          <p>Il faut traiter les bâtiments et leurs représentations. Pour y parvenir, nous aurions sans doute intérêt à réfléchir à partir des propositions de l’article sur la modélisation des projets architecturaux.</p>
+        </div>
+        <div>
+          <head>À traiter pour généraliser le modèle</head>
+          <p>&lt;objectDesc&gt; ne permet que la description du support et de la mise en page.</p>
+          <p>→ trouver une manière d’intégrer la description des techniques artistiques</p>
+        </div>
+
+      </div>
+    </back>
+  </text>
+</TEI>

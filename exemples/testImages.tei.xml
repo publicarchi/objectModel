@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ld="ledoux">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listObject>
+            <object>
+               <objectIdentifier>
+                  
+               </objectIdentifier>
+            </object>
+         </listObject>
+         <listObject>
+            <object>
+               <!-- premier objet à savoir L'Architecture considérée, mais peut-être que cette description n'est pas nécessaire. -->
+               <objectIdentifier>
+                  <!-- Informations relatives à la localisation de l'objet -->
+                  <objectName><!-- Contient un nom ou une phrase pour désigner un objet --><title>L'Architecture
+                        considérée sous le rapport de l'art, des moeurs et de la législation, de C.
+                        N. Ledoux. Collection qui rassemble tous les genres de bâtiments employés
+                        dans l'ordre social. III : Troisième volume contenant des plans, élévations,
+                        coupes, vues perspectives de palais de gouvernements, théâtres, caisses
+                        publiques, hotels des finances, hotels, maisons de ville et de campagne,
+                        chapelles, sucursalles, entrées de parc etc. construits ou commencés depuis
+                        l'année 1768 jusques en 1789</title>
+                     <location>
+                        <institution>Bibliothèque Historique de la Ville de Paris</institution>
+                        <!-- <Institution/> pas valide sous le schéma actuel mais il aurait toute sa place ici -->
+                        <country>France</country>
+                     </location>
+                     <date>(?)</date><!-- Date d'édition de L'Architecture considére -->
+                     <idno type="numerise">1-RES-122</idno>
+                  </objectName>
+               </objectIdentifier>
+            </object>
+            
+            <object xml:id="pl001">
+               <!-- Deuxième objet à savoir l'estampe / la planche -->
+               <objectIdentifier>
+                  <objectName>Fragments des propylées de Paris</objectName>
+                  <idno>xxx</idno>
+               </objectIdentifier>
+               <!-- localisation -->
+               <objectType>Œuvre visuelle</objectType>
+               <physDesc>
+                  <mediumDesc>
+                     <!-- Execution de la gravure -->
+                     <technic type="main" ref="http://aat/eee">gravure en creux au burin</technic>
+                     <technic type="sub" ref="http://aat/aaa">eau-forte</technic>
+                     <!-- répétable ? -->
+                     <!-- intaglioPrints ?(préféré) ou utiliser directement le terme en français de gravure en creux ? cf. Art et Architecture Thesaurus -->
+                     <!-- dans quelle mesure on tire parti du caractère hiérarchique du thesaurus, par ailleurs définir un niveau de description -->
+                     <!-- prendre en charge technique secondaire et principale : @type ? @n pour l’ordre ? -->
+                     <material/>
+                     <!-- répétable ? -->
+                     <!-- mécanisme de référence à un identifiant unique -->
+                     <!-- revoir material, exemple sculpture taille directe bois ou pierre, cas des estampes et des planches.
+                        Mais on a déjà objectDesc pour les matériaux.
+                        Peut-être utile pour l’encre. Auquel cas, il faut un mécanisme pour lier la technique et material -->
+                     <medium type="main">
+                        <technic>gravure en creux au burin</technic>
+                        <material>encre noire</material>
+                     </medium>
+                     <medium type="sub">
+                        <technic ref="http://aat/eee">gravure en creux au burin</technic>
+                        <material ref="http://aat/aaa">encre noire</material>
+                     </medium>
+                     <!-- voir comment CIDOC conceptualise un acte de création -->
+                  </mediumDesc>
+                  <objectDesc>
+                     <layoutDesc>
+                        <!-- Comment définir des zones -->
+                        <!-- M -->
+                        <dimensions>
+                           <height/>
+                           <width/>
+                        </dimensions>
+                        <layout>
+                           <!-- À utiliser pour indiquer comment et où le texte figure sur la page, peut-être pour décrire l'emplacement et le contenu de la lettre de l'estampe ?-->
+                           <fw place="topCenter">Fragments des propylées de Paris</fw>
+                           <fw place="bottomLeft"> Ledoux architecte du roi</fw>
+                           <fw place="bottomRight">Gravé par Van Maele</fw>
+                           <!-- Utilisation de l'élément fw pour encoder une information qui figure sur une page -->
+                           <!-- @TODO Reprendre les attributs -->
+                        </layout>
+                     </layoutDesc>
+                     <supportDesc>
+                        <!-- Description du papier sur lequel la gravure a été réalisée, description du filigrane, de la marque de collection -->
+                        <support>
+                           <material>Papier velin </material>
+                           <stamp>Marque Bibliothèque Historique de la Ville de Paris </stamp>
+                           <watermark>(?)</watermark>
+                        </support>
+                     </supportDesc>
+                     <relation>cuivre1, cuivre2</relation>
+                  </objectDesc>
+                  <relation>objet1>cuivre1, objet>idée1</relation>
+                  <history/>
+               </physDesc>
+               <!-- Retracer l'historique de l'oeuvre -->
+               <object>
+                  <!-- idée de l’édifice -->
+               </object>
+               <object>
+                  <!-- l’édifice bâti, s’il existe -->
+               </object>
+               <object>
+                  <!-- l’édifice représenté (en gravure) -->
+               </object>
+               <object>
+                  <!-- l’édifice représenté (dessinée, souvent perdu) -->
+               </object>
+               <object>
+                  <!-- l’édifice représenté autrement -->
+               </object>
+               <object>
+                  <!-- l’édifice représenté (en gravure), 1er état-->
+               </object>
+               <object>
+                  <!-- l’édifice représenté (en gravure), 2e état-->
+               </object>
+
+               <object>
+                  <!-- planche associant plusieurs objets et reliée à l’idée d’un édifice -->
+               </object>
+               <!-- Monsieur Tabari -->
+               <!-- faire du bottom up, la fiche ci-dessus est au niveau de l’exemplaire car pour la gravure, c’est l’instance imprimée qui constitue la preuve matérielle d’existence d’un objet et des indices historiques (filigranes, etc.) -->
+               <!-- traiter les "images" au niveau des cuivres seulement -->
+               <!-- traiter les cuivres en lien avec les œuvres -->
+               <!-- faire un essai avec Thélusson -->
+            </object>
+         </listObject>
+         
+         <!-- édifices construits -->
+         <!-- représentations (par plaque) -->
+         <!-- autres représentations -->
+         <!-- exemplaires (planches) -->
+         <!-- volumes -->
+         <!-- planches qui peuvent associer plusieurs plaques -->
+         
+         <listObject type="works">
+            <head>Œuvres</head>
+            <object>
+               <objectIdentifier>
+                  <objectName>Hôtel de Thélusson</objectName>
+                  <placeName>Paris</placeName>
+               </objectIdentifier>
+               <objectType ref="http://data.culture.fr/thesaurus/page/ark:/67717/T96-517">Hôtel</objectType>
+               <event>
+                  <eventType ref="http://www.cidoc-crm.org/Entity/e65-creation/version-6.2">Creation</eventType>
+                  <date from="1778"/>
+               </event>
+               <!-- Marie-Jeanne Girardot de Vermenoux (1736-1781) commanditaire -->
+               <!-- détruit en 1826 quand la rue Laffitte est prolongée jusqu’à la rue de la Victoire -->
+            </object>
+         </listObject>
+         
+         <listObject type="buildings">
+            <head>Édifices</head>
+            <desc>Liste les projets de Ledoux avec leurs caractéristiques (commanditaire, date, etc.).</desc>
+            <object>
+               <objectIdentifier>
+                  <objectName>Hôtel de Thélusson</objectName>
+                  <placeName>Paris</placeName>
+               </objectIdentifier>
+               <objectType ref="http://data.culture.fr/thesaurus/page/ark:/67717/T96-517">Hôtel</objectType>
+               <event>
+                  <eventType rel="http://www.cidoc-crm.org/Entity/e12-production/version-6.2">Construction</eventType>
+                  <date from="1778"/>
+               </event>
+               <!-- Marie-Jeanne Girardot de Vermenoux (1736-1781) commanditaire -->
+               <!-- détruit en 1826 quand la rue Laffitte est prolongée jusqu’à la rue de la Victoire -->
+            </object>
+         </listObject>
+         
+         <listObject>
+            <head type="manifestation">Manifestations gravées</head>
+            <desc>Liste les représentations gravées des œuvres de Ledoux avec leurs caractéristiques spécifiques (format, lettre, état). Ces manifestations matérialisent les expressions d’une œuvre.</desc>
+            <object>
+               <objectIdentifier></objectIdentifier>
+            </object>
+         </listObject>
+         
+         <listObject>
+            <head type="manifestation">Manifestations dessinées</head>
+            <desc>Liste les représentations dessinées des œuvres de Ledoux avec leurs caractéristiques spécifiques (format, papier, lieu de conservation, ajouts). Ces manifestations matérialisent les expressions d’une œuvre. S’agissant d’unica, il n’y a pas d’exemplaires.</desc>
+            <object>
+               <objectIdentifier></objectIdentifier>
+            </object>
+         </listObject>
+         
+         <listObject type="items">
+            <head>Exemplaires en feuilles</head>
+            <desc>Liste les planches gravées en tant qu’exemplaires individuels avec leurs caractéristiques spécifiques (format, papier, lieu de conservation, ajouts). Ces exemplaires sont en relation avec une ou plusieurs manifestations.</desc>
+            <object>
+               <objectIdentifier></objectIdentifier>
+            </object>
+         </listObject>
+         
+      </body>
+   </text>
+</TEI>
